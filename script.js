@@ -68,4 +68,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// script.js
+window.addEventListener('scroll', function() {
+    const aboutSection = document.querySelector('.about-me');
+    const position = aboutSection.getBoundingClientRect().top;
+    const screenPosition = window.innerHeight / 1.5;
+
+    if (position < screenPosition) {
+        aboutSection.classList.add('visible');
+    }
+});
+
+
 

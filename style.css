@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
     font-family: 'Roboto', sans-serif;
     color: white;
@@ -8,6 +9,7 @@
     text-shadow: 1px 1px 3px black;
 }
 
+/* Header Styles */
 header {
     backdrop-filter: blur(10px);
     position: fixed;
@@ -31,10 +33,20 @@ header {
     font-weight: bold;
 }
 
+.header p.active {
+    color: #00BCFF;
+    border-bottom: 2px solid #00BCFF;
+}
+
+#logo {
+    cursor: pointer;
+}
+
 #navbar {
     display: none;
 }
 
+/* Intro Section */
 .introContainer {
     position: relative;
     height: 100vh;
@@ -44,33 +56,15 @@ header {
     flex-direction: column;
 }
 
-h1 {
-    font-size: 2em;
-    max-width: 80vw;
-    margin: 1em 0 1em 0;
-}
-
-h2 {
-    font-size: 1.5em;
-    max-width: 80vw;
-}
-
-a {
-    text-decoration: none;
-}
-
-#logo {
-    cursor: pointer;
-}
-
-.name{
+.name {
     width: 90%;
     height: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.job-title{
+
+.job-title {
     width: 90%;
     height: 2rem;
     display: flex;
@@ -78,16 +72,185 @@ a {
     justify-content: center;
 }
 
+h1 {
+    font-size: 2em;
+    max-width: 80vw;
+    margin: 1em 0;
+}
+
+/* Section Subheadings */
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    color: #814BF6; /* Text color */
+    text-shadow:
+            0 0 10px #BA55D3, /* Shadow glow effect */
+            0 0 20px #814BF6,
+            0 0 30px #814BF6;
+}
+
+a {
+    color: #00BCFF; /* Updated link color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #814BF6; /* Hover color */
+}
+
+
+.about-me {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 3em 0;
+}
+
+.profile-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    border: 2px solid #814BF6;
+    box-shadow: 0 0 10px #BA55D3;
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text h1 {
+    font-size: 2em;
+    color: #BA55D3;
+    margin-bottom: 0.5em;
+}
+
+.about-text p {
+    font-size: 1em;
+    line-height: 1.6em;
+    color: #ccc;
+}
+
+.about-text a {
+    color: #BA55D3;
+    text-decoration: none;
+}
+
+.about-text a:hover {
+    text-decoration: underline;
+}
+
+.about-me {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+}
+
+.about-me.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.personal-interests {
+    display: grid;
+    justify-items: center;
+    align-content: center;
+}
+
+.personal-interests h2 {
+    font-size: 1.5em;
+    color: #BA55D3;
+    margin-bottom: 1em;
+    text-shadow: 0 0 black;
+}
+
+.interests {
+    display: flex;
+    gap: 2em;
+}
+
+.interest {
+    text-align: center;
+}
+
+.interest i {
+    font-size: 2em;
+    color: #814BF6;; /* Updated color */
+    margin-bottom: 0.5em;
+}
+
+
+.interest p {
+    color: #ccc;
+}
+
+.personal-quote {
+    font-style: italic;
+    color: #BA55D3;
+    margin: 2em 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .about-me {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-image img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .interests {
+        flex-direction: column;
+        gap: 1em;
+    }
+}
+
+.testimonials {
+    margin-top: 3em;
+}
+
+.testimonials h2 {
+    font-size: 1.5em;
+    color: #BA55D3;
+    margin-bottom: 1em;
+    text-shadow: 0 0 black;
+}
+
+.testimonial {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1.5em;
+    border-left: 5px solid #BA55D3;
+    font-style: italic;
+    margin: 2em;
+}
+.testimonial p{
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.testimonial .author {
+    margin-top: 1em;
+    text-align: right;
+    font-style: normal;
+    color: #ccc;
+}
+
+
+/* Content Container */
 .content-container {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 2em;
-    padding: 3em 0 3em 0;
+    padding: 3em 0;
     margin: auto;
     box-shadow: 0 0 600px 1px #BA55D3;
+    width: 95%;
+    border-radius: 20px;
 }
 
 .content-container > div {
@@ -95,55 +258,139 @@ a {
     min-width: 85vw;
 }
 
+/* Section Headings */
 h3 {
     font-size: 1.5em;
     color: #BA55D3;
+    text-align: center;
+    margin-bottom: 1em;
 }
 
-.welcome-container {
-
-}
-
+/* Welcome Section */
 .welcome-container p {
-    padding: 1em 0 1em 0;
+    padding: 1em 0;
 }
 
-#mypicture {
-    padding: 3em 0 3em 0;
-    max-width: 50vw;
-    max-height: 50vh;
-    border-radius: 150px;
-}
-
+/* Experience Section - Timeline */
 .experiences {
-    display: grid;
-    grid-template-columns: 1fr;
     width: 100%;
+    position: relative;
+    padding: 2em 0;
 }
 
-.experience p:nth-child(even) {
+.timeline {
+    position: relative;
+    margin: 2em 0;
+    overflow: hidden; /* Added to contain floated elements */
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;      /* Start from the top */
+    bottom: 0;   /* Extend to the bottom */
+    width: 2px;
+    background: #BA55D3;
+    transform: translateX(-95%);
+}
+
+.timeline-item {
+    position: relative;
+    width: 49%;
+    padding: 1em 2em;
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
     text-align: right;
 }
 
-.experience {
+.timeline-item:nth-child(even) {
+    left: 50%;
     text-align: left;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    padding: 1em 0 1em 0;
 }
 
-.experience > * {
-    line-height: 2em;
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 1em;
+    right: -13px;
+    width: 14px;
+    height: 14px;
+    background: #BA55D3;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #BA55D3;
 }
 
+.timeline-item:nth-child(even)::before {
+    left: -8px;
+    right: auto;
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: #BA55D3;
+    margin-bottom: 0.5em;
+}
+
+.timeline-content h4 {
+    margin: 0.5em 0 0.2em 0;
+    color: #BA55D3;
+}
+
+.timeline-content h5 {
+    margin: 0 0 1em 0;
+    font-weight: normal;
+    color: white;
+}
+
+/* Achievements with Icons */
 .achievements {
-    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1em; /* Consistent gap between achievement items */
+    margin-top: 1em;
+    align-items: flex-start; /* Default alignment for right-side items */
 }
 
-.achievements li {
-    padding: 0.5em 0 0.5em 0;
+.achievement {
+    display: flex;
+    align-items: center; /* Vertically align items */
+    gap: 0.5em; /* Consistent space between icon and text */
 }
 
+.achievement i {
+    color: #BA55D3;
+    font-size: 1.2em;
+    min-width: 1.5em; /* Ensure consistent width for icons */
+    text-align: center;
+    display: flex;
+    align-items: center; /* Vertically center icon */
+    justify-content: center; /* Horizontally center icon */
+}
+
+.achievement p {
+    margin: 0;
+    color: white;
+    line-height: 1.2em; /* Consistent line height */
+}
+
+/* Alignment adjustments for left-side timeline items */
+.timeline-item:nth-child(odd) .achievements {
+    align-items: flex-end; /* Align achievements to the right */
+}
+
+.timeline-item:nth-child(odd) .achievement {
+    flex-direction: row-reverse; /* Reverse icon and text order */
+}
+
+.timeline-item:nth-child(odd) .achievement p {
+    text-align: right; /* Align text to the right */
+}
+
+/* Education Section */
 .eduContainer {
     display: flex;
     flex-direction: column;
@@ -151,9 +398,7 @@ h3 {
     line-height: 1.5em;
 }
 
-.education {
-}
-
+/* Skills Section */
 .skills {
     line-height: 2em;
 }
@@ -165,39 +410,14 @@ h3 {
 }
 
 .skill i {
-    margin-right: 0.5em; /* Space between icon and text */
-    vertical-align: middle; /* Align icon with text */
+    margin-right: 0.5em;
+    vertical-align: middle;
     width: 1rem;
     height: 1rem;
 }
 
 .skill p:nth-child(even) {
     text-align: right;
-}
-
-.contant-me {
-    text-align: left;
-}
-
-footer {
-    padding: 3em 1em 1em 1em;
-    font-size: 0.8em;
-}
-
-#stars {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-}
-
-.star {
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background-color: #FFF;
 }
 
 .skill p {
@@ -211,19 +431,69 @@ footer {
     margin-top: 0.5em;
 }
 
+/* Skills Section */
 .skill-bar span {
     display: block;
     height: 10px;
-    background-color: #BA55D3;
-    width: 80%; /* Change based on skill level */
+    background-color: #00BCFF; /* Updated color */
     border-radius: 25px;
 }
 
+
+/* Contact Section */
+.contact-me {
+    text-align: left;
+}
+
+/* Footer */
+footer {
+    padding: 3em 1em 1em 1em;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+footer p {
+    margin: 0.5em 0;
+    color: #ccc;
+}
+
+/* Star Background */
+#stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #FFF;
+    box-shadow: 0 0 5px #FFF;
+    animation: twinkle 2s infinite ease-in-out alternate;
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Typewriter Effect */
 @keyframes blink {
-    0%, 50% {
+    0%,
+    50% {
         border-right-color: white;
     }
-    50%, 100% {
+    50%,
+    100% {
         border-right-color: transparent;
     }
 }
@@ -232,12 +502,26 @@ footer {
     display: inline-block;
     overflow: hidden;
     white-space: nowrap;
-    border-right: 2px solid white; /* Simulates the caret */
-    font-family: inherit; /* Ensures font consistency */
+    border-right: 2px solid white;
+    font-family: inherit;
 }
 
-
-
-
-
-
+/* Responsive Timeline */
+@media screen and (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+    .timeline-item {
+        width: 100%;
+        padding-left: 40px;
+        text-align: left !important;
+    }
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    .timeline-item::before {
+        left: 10px;
+        right: auto;
+    }
+}
