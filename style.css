@@ -83,10 +83,6 @@ h2 {
     font-size: 1.5em;
     margin-bottom: 1em;
     color: #814BF6; /* Text color */
-    text-shadow:
-            0 0 10px #BA55D3, /* Shadow glow effect */
-            0 0 20px #814BF6,
-            0 0 30px #814BF6;
 }
 
 a {
@@ -175,7 +171,7 @@ a:hover {
 
 .interest i {
     font-size: 2em;
-    color: #814BF6;; /* Updated color */
+    color: white; /* Updated color */
     margin-bottom: 0.5em;
 }
 
@@ -249,7 +245,6 @@ a:hover {
     padding: 3em 0;
     margin: auto;
     box-shadow: 0 0 600px 1px #BA55D3;
-    width: 95%;
     border-radius: 20px;
 }
 
@@ -288,16 +283,17 @@ h3 {
     content: '';
     position: absolute;
     left: 50%;
-    top: 0;      /* Start from the top */
-    bottom: 0;   /* Extend to the bottom */
+    top: 20px;
+    bottom: 0;
     width: 2px;
     background: #BA55D3;
-    transform: translateX(-95%);
+    transform: translateX(-50%);
+    z-index: 10;
 }
 
 .timeline-item {
     position: relative;
-    width: 49%;
+    width: 50%;
     padding: 1em 2em;
     box-sizing: border-box;
 }
@@ -316,7 +312,7 @@ h3 {
     content: '';
     position: absolute;
     top: 1em;
-    right: -13px;
+    right: -7px;
     width: 14px;
     height: 14px;
     background: #BA55D3;
@@ -325,7 +321,7 @@ h3 {
 }
 
 .timeline-item:nth-child(even)::before {
-    left: -8px;
+    left: -7px;
     right: auto;
 }
 
@@ -525,3 +521,126 @@ footer p {
         right: auto;
     }
 }
+
+/* Education Section */
+.education-section {
+    width: 100%;
+    position: relative;
+    padding: 2em 0;
+}
+
+.education-section h3 {
+    font-size: 1.5em;
+    color: #BA55D3;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.education-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+
+.education-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid #BA55D3;
+    border-radius: 10px;
+    padding: 1.5em;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(186, 85, 211, 0.2);
+}
+
+.education-card .card-icon {
+    font-size: 2em;
+    color: #00BCFF;
+    margin-bottom: 0.5em;
+}
+
+.education-card h4 {
+    font-size: 1.2em;
+    color: #814BF6;
+    margin-bottom: 0.5em;
+}
+
+.education-card h5 {
+    font-weight: normal;
+    color: white;
+    margin-bottom: 0.5em;
+}
+
+.education-card p {
+    color: #ccc;
+    margin: 0.3em 0;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(186, 85, 211, 0.4);
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .education-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .education-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+.education-card {
+    background-color: rgba(0, 188, 255, 0.05);
+    border: 1px solid #00BCFF;
+}
+
+.education-card h4 {
+    color: #00BCFF;
+}
+
+.education-card .card-icon {
+    color: #BA55D3;
+}
+
+/* Initial state before scrolling into view */
+.scroll-effect {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-in-out;
+}
+
+/* State after scrolling into view */
+.scroll-effect.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fade-In Left */
+.scroll-effect.fade-in-left {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.6s ease-in-out;
+}
+
+.scroll-effect.fade-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Fade-In Right */
+.scroll-effect.fade-in-right {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.6s ease-in-out;
+}
+
+.scroll-effect.fade-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
