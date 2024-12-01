@@ -18,6 +18,9 @@ for (let i = 0; i < numStars; i++) {
 document.getElementById('logo').addEventListener('click', function() {
     const navbar = document.getElementById('navbar');
     navbar.style.display = navbar.style.display === 'grid' ? 'none' : 'grid';
+    navbar.style.backgroundColor = 'transparent';
+    navbar.style.backdropFilter = 'blur(10px)';
+    navbar.style.width = '100%';
 });
 
 function moveStars() {
