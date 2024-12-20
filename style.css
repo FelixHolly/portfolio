@@ -61,7 +61,7 @@ header {
     height: 5rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
 }
 
 .job-title {
@@ -69,13 +69,12 @@ header {
     height: 2rem;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
 }
 
 h1 {
     font-size: 2em;
     max-width: 80vw;
-    margin: 1em 0;
 }
 
 /* Section Subheadings */
@@ -114,6 +113,7 @@ a:hover {
 
 .about-text {
     max-width: 600px;
+    text-wrap-style: balance;
 }
 
 .about-text h1 {
@@ -162,8 +162,9 @@ a:hover {
 }
 
 .interests {
-    display: flex;
+    display: grid;
     gap: 2em;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .interest {
@@ -184,7 +185,7 @@ a:hover {
 .personal-quote {
     font-style: italic;
     color: #BA55D3;
-    margin: 2em 0;
+    margin: 2em;
     text-align: center;
 }
 
@@ -198,11 +199,6 @@ a:hover {
     .profile-image img {
         width: 150px;
         height: 160px;
-    }
-
-    .interests {
-        flex-direction: column;
-        gap: 1em;
     }
 }
 
@@ -372,19 +368,6 @@ h3 {
     line-height: 1.2em; /* Consistent line height */
 }
 
-/* Alignment adjustments for left-side timeline items */
-.timeline-item:nth-child(odd) .achievements {
-    align-items: flex-end; /* Align achievements to the right */
-}
-
-.timeline-item:nth-child(odd) .achievement {
-    flex-direction: row-reverse; /* Reverse icon and text order */
-}
-
-.timeline-item:nth-child(odd) .achievement p {
-    text-align: right; /* Align text to the right */
-}
-
 /* Education Section */
 .eduContainer {
     display: flex;
@@ -502,7 +485,7 @@ footer p {
 }
 
 /* Responsive Timeline */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
     .timeline::before {
         left: 20px;
     }
@@ -615,6 +598,22 @@ footer p {
         height: 200px;
     }
 }
+@media screen and (min-width: 600px) {
+    .timeline-item:nth-child(odd) .achievement {
+        flex-direction: row-reverse; /* Reverse icon and text order */
+    }
+
+    .timeline-item:nth-child(odd) .achievement p {
+        text-align: right; /* Align text to the right */
+    }
+    /* Alignment adjustments for left-side timeline items */
+    .timeline-item:nth-child(odd) .achievements {
+        align-items: end; /* Align achievements to the right */
+    }
+    .interests {
+        grid-auto-flow: column;
+    }
+}
 
 
 /* Initial state before scrolling into view */
@@ -681,6 +680,7 @@ footer p {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 0.5em 1em;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
 .project-card-container{
