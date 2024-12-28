@@ -6,7 +6,6 @@
     font-size: 1rem;
     margin: 0;
     scroll-behavior: smooth;
-    text-shadow: 1px 1px 3px black;
 }
 
 /* Header Styles */
@@ -29,6 +28,12 @@ header {
 }
 
 .header p {
+    padding: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.header a {
     padding: 1.5rem;
     font-size: 2rem;
     font-weight: bold;
@@ -90,15 +95,9 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
-    color: #814BF6; /* Hover color */
-}
-
 
 .about-me {
     display: flex;
-    align-items: center;
     justify-content: center;
     gap: 2em;
     padding: 3em 0;
@@ -124,15 +123,6 @@ a:hover {
     font-size: 1em;
     line-height: 1.6em;
     color: #ccc;
-}
-
-.about-text a {
-    color: #BA55D3;
-    text-decoration: none;
-}
-
-.about-text a:hover {
-    text-decoration: underline;
 }
 
 .about-me {
@@ -718,4 +708,114 @@ footer p {
     border-radius: 50%;
     box-shadow: inset 0 1px 40px #00BCFF, 0 0 30px rgba(186, 85, 211, 1);
 }
+
+.contact-section {
+    width: 85vw;
+    margin: 3em auto;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* "fade-in-bottom" or "visible" transitions already exist in your code. */
+
+.contact-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    color: #BA55D3;
+}
+
+.contact-section p {
+    color: #ccc;
+    margin-bottom: 2em;
+    font-size: 1em;
+}
+
+/* Contact Form */
+.contact-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    max-width: 400px;
+    margin: 0 auto 2em auto; /* center and space from social links */
+}
+
+.contact-form label {
+    text-align: left;
+    color: #BA55D3;
+    font-weight: bold;
+    margin-bottom: -6px;
+    font-size: 0.9em;
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: 1px solid #BA55D3;
+    border-radius: 4px;
+    background-color: black; /* consistent with your theme */
+    color: #fff;
+    padding: 0.5em;
+    font-size: 1em;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #ddd;
+}
+
+.contact-form button {
+    background-color: #00BCFF;
+    border: none;
+    border-radius: 4px;
+    padding: 0.7em 1.2em;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #814BF6;
+}
+
+/* Social Icons */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.social-links a {
+    color: #BA55D3;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #00BCFF;
+}
+
+.cta-button {
+    margin: 3rem 0;
+    display: inline-block;        /* Make it look more like a button than a text link */
+    padding: 0.75em 1.25em;       /* Space around the text */
+    background-color: #00BCFF;    /* Bright background color */
+    color: #FFF;                  /* Contrasting text color */
+    border-radius: 5px;           /* Slightly rounded corners */
+    text-decoration: none;        /* Remove default underline */
+    font-weight: bold;            /* Make the text stand out */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #814BF6;    /* Hover color */
+    transform: scale(1.05);       /* Slight “zoom” effect on hover */
+}
+
+.cta-button:focus {
+    outline: none;                /* Remove default browser outline */
+    box-shadow: 0 0 0 3px rgba(129, 75, 246, 0.5); /* Focus ring for accessibility */
+}
+
 

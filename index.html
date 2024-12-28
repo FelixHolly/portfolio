@@ -17,11 +17,11 @@
     <div class="header">
         <p id="logo">HF</p>
         <div id="navbar">
-            <p>HOME</p>
-            <p>ABOUT</p>
-            <p>RECENT WORK</p>
-            <p>CONTACT</p>
-            <p>LANGUAGE</p>
+            <a>HOME</a>
+            <a>ABOUT</a>
+            <a>RECENT WORK</a>
+            <a href="#contact">CONTACT</a>
+            <a>LANGUAGE</a>
         </div>
     </div>
 </header>
@@ -60,7 +60,7 @@
                 <p>
                     Interested in collaborating or learning more about my work?
                 </p>
-                <a href="#contact">Feel free to reach out!</a>
+                <a href="#contact" class="cta-button">Feel free to reach out!</a>
             </div>
         </div>
 
@@ -281,6 +281,34 @@
                     <h2>WheelWallet</h2>
                     <p>Stay tuned for more details!</p>
                 </div>
+            </div>
+        </div>
+
+        <!-- Contact Me Section -->
+        <div id="contact" class="contact-section scroll-effect fade-in-bottom">
+            <h2>Contact Me</h2>
+            <p>
+                Feel free to send me a message or connect with me on LinkedIn, GitHub, or
+                any of my social platforms below.
+            </p>
+
+            <form class="contact-form" action="mailto:fenix-code@gmail.com" method="post" enctype="text/plain">
+                <label for="name-form">Name:</label>
+                <input type="text" id="name-form" name="name" placeholder="Your Name" required />
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required />
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+
+            <div class="social-links">
+                <!-- Replace # with your actual social links -->
+                <a href="https://at.linkedin.com/in/felix-hollndonner-2908131b8" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/FelixHolly" target="_blank"><i class="fab fa-github"></i></a>
             </div>
         </div>
 
