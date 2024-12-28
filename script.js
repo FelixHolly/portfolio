@@ -88,5 +88,17 @@ window.addEventListener('scroll', function() {
 });
 
 
+document.addEventListener('click', function(e) {
+    const logoEl = document.getElementById('logo');
+    const navbarEl = document.getElementById('navbar');
+
+    if (navbarEl.style.display === 'grid') {
+        if (!navbarEl.contains(e.target) && e.target !== logoEl) {
+            navbarEl.style.display = 'none';
+        }
+    }
+});
+
+
 
 
