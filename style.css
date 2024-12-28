@@ -29,7 +29,8 @@ header {
 }
 
 .header p {
-    padding: 0.5em;
+    padding: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
 }
 
@@ -106,9 +107,6 @@ a:hover {
 .profile-image img {
     width: 200px;
     height: 210px;
-    border-radius: 100px;
-    border: 2px solid #814BF6;
-    box-shadow: 0 0 10px #BA55D3;
 }
 
 .about-text {
