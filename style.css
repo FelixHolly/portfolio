@@ -13,7 +13,7 @@ header {
     backdrop-filter: blur(10px);
     position: fixed;
     width: 100vw;
-    z-index: 2;
+    z-index: 20;
     background-color: transparent;
 }
 
@@ -28,8 +28,8 @@ header {
 }
 
 .header p {
-    padding: 1.5rem;
-    font-size: 2rem;
+    padding: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
@@ -587,6 +587,11 @@ footer p {
     }
 }
 @media screen and (min-width: 600px) {
+    .header p {
+        padding: 1.5rem;
+        font-size: 2rem;
+    }
+
     .timeline-item:nth-child(odd) .achievement {
         flex-direction: row-reverse; /* Reverse icon and text order */
     }
