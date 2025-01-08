@@ -1,20 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;700&display=swap"
+            rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- Favicon -->
+    <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="assets/favicon/apple-touch-icon.png"
+    />
+    <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="assets/favicon/favicon-16x16.png"
+    />
+
+    <!-- Your Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
 
     <title>Felix Hollndonner</title>
 </head>
+
+
 <body>
 
 <header>
@@ -28,22 +57,20 @@
         </div>
     </div>
 </header>
-
-<div id="home" class="introContainer">
-    <div id="stars"></div>
+<div class="introContainer" id="home">
     <div class="name">
-        <h1 id="name" class="typewriter"></h1>
+        <h1 class="typewriter" id="name"></h1>
     </div>
     <div class="job-title">
-        <h2 id="job-title" class="typewriter"></h2>
+        <h2 class="typewriter" id="job-title"></h2>
     </div>
 </div>
 
 <div class="planet-container">
     <div class="content-container">
-        <div id="about" class="about-me scroll-effect fade-in-bottom">
+        <div class="about-me scroll-effect fade-in-bottom" id="about">
             <div class="profile-image">
-                <img src="./assets/me.png" alt="Felix Hollndonner">
+                <img alt="Felix Hollndonner" src="./assets/me.png">
             </div>
             <div class="about-text">
                 <p>
@@ -66,7 +93,7 @@
             </div>
         </div>
 
-        <a href="#contact" class="cta-button">Feel free to reach out!</a>
+        <a class="cta-button" href="#contact">Feel free to reach out!</a>
 
         <div class="personal-interests scroll-effect fade-in-bottom">
             <h2>Personal Interests</h2>
@@ -177,11 +204,19 @@
         <div class="testimonials scroll-effect fade-in-left">
             <h2>Testimonials</h2>
             <div class="testimonial">
-                <p>"Felix Hollndonner demonstrated his willingness to learn, flexibility, and strong comprehension skills by quickly adapting to new technologies such as Angular. His technically sound and conscientious approach consistently delivered flawless results, making him a great asset to the team."</p>
+                <p>"Felix Hollndonner demonstrated his willingness to learn, flexibility, and strong comprehension
+                    skills by quickly adapting to new technologies such as Angular. His technically sound and
+                    conscientious approach consistently delivered flawless results, making him a great asset to the
+                    team."</p>
                 <p class="author">- Team Leader Software Development at Polyoint AG</p>
             </div>
             <div class="testimonial">
-                <p>"Felix Hollndonner demonstrated exceptional technical skills and a professional, empathetic approach in his role as a Software Developer. He was instrumental in the development and support of Java applications, as well as in establishing new technologies and infrastructure. His structured and effective work style, combined with his above-average dedication, consistently delivered outstanding results. Felix was highly regarded by both colleagues and management for his cooperative and helpful nature. We would unreservedly recommend him as a conscientious and team-oriented professional."</p>
+                <p>"Felix Hollndonner demonstrated exceptional technical skills and a professional, empathetic approach
+                    in his role as a Software Developer. He was instrumental in the development and support of Java
+                    applications, as well as in establishing new technologies and infrastructure. His structured and
+                    effective work style, combined with his above-average dedication, consistently delivered outstanding
+                    results. Felix was highly regarded by both colleagues and management for his cooperative and helpful
+                    nature. We would unreservedly recommend him as a conscientious and team-oriented professional."</p>
                 <p class="author">- Team Lead at Eurotours</p>
             </div>
         </div>
@@ -268,7 +303,7 @@
         </div>
 
         <!-- Portfolio Section -->
-        <div id="projects" class="projects scroll-effect">
+        <div class="projects scroll-effect" id="projects">
             <h3>Portfolio</h3>
             <div class="project-card-container">
                 <div class="project-card teaser flip-card">
@@ -276,7 +311,7 @@
                         <!-- Front content -->
                         <div class="flip-card-front">
                             <div class="teaser-image">
-                                <img src="assets/wheel-wallet.png" alt="WheelWallet Preview">
+                                <img alt="WheelWallet Preview" src="assets/wheel-wallet.png">
                             </div>
                             <h2>WheelWallet</h2>
                             <p>Hover me!</p>
@@ -285,7 +320,8 @@
                         <!-- Back content -->
                         <div class="flip-card-back">
                             <h2>WheelWallet</h2>
-                            <p>A comprehensive car management tool to organize all your vehicles and streamline paperwork handling in one convenient place.</p>
+                            <p>A comprehensive car management tool to organize all your vehicles and streamline
+                                paperwork handling in one convenient place.</p>
                             <a href="https://github.com/FelixHolly/WheelWallet" target="_blank">
                                 View on GitHub
                             </a>
@@ -298,7 +334,7 @@
                         <!-- Front content -->
                         <div class="flip-card-front">
                             <div class="teaser-image">
-                                <img src="assets/wheel-wallet.png" alt="WheelWallet Preview">
+                                <img alt="WheelWallet Preview" src="assets/wheel-wallet.png">
                             </div>
                             <h2>WheelWallet</h2>
                             <p>Hover me!</p>
@@ -318,29 +354,30 @@
         </div>
 
         <!-- Contact Me Section -->
-        <div id="contact" class="contact-section scroll-effect fade-in-bottom">
+        <div class="contact-section scroll-effect fade-in-bottom" id="contact">
             <h2>Contact Me</h2>
             <p>
                 Feel free to send me a message or connect with me on LinkedIn, GitHub, or
                 any of my social platforms below.
             </p>
 
-            <form class="contact-form" action="mailto:fenix-code@gmail.com" method="post" enctype="text/plain">
+            <form action="mailto:fenix-code@gmail.com" class="contact-form" enctype="text/plain" method="post">
                 <label for="name-form">Name:</label>
-                <input type="text" id="name-form" name="name" placeholder="Your Name" required />
+                <input id="name-form" name="name" placeholder="Your Name" required type="text"/>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Your Email" required />
+                <input id="email" name="email" placeholder="Your Email" required type="email"/>
 
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                <textarea id="message" name="message" placeholder="Your Message" required rows="5"></textarea>
 
                 <button type="submit">Send</button>
             </form>
 
             <div class="social-links">
                 <!-- Replace # with your actual social links -->
-                <a href="https://at.linkedin.com/in/felix-hollndonner-2908131b8" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://at.linkedin.com/in/felix-hollndonner-2908131b8" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/FelixHolly" target="_blank"><i class="fab fa-github"></i></a>
             </div>
         </div>
