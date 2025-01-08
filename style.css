@@ -61,6 +61,7 @@ h2 {
 h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    text-align: center;
 }
 
 p,
@@ -83,60 +84,117 @@ a {
 a:hover {
     color: #ffd700;
 }
-
 /******************************************
-  HEADER & NAV
+  HEADER & NAV (NEW)
 ******************************************/
 header {
     position: fixed;
     width: 100%;
-    backdrop-filter: blur(10px);
     z-index: 20;
-    /* Slight translucent background */
+    top: 0; /* needed for hide-on-scroll logic */
+    /* Slight translucent, blurred background */
     background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    transition: top 0.3s ease-in-out; /* for hide-on-scroll */
 }
 
-.header {
+/* Container holds logo and menu icon */
+.header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0.5rem 1rem;
 }
 
-#logo {
-    cursor: pointer;
-    font-weight: 700;
+/* Logo Styles */
+.logo {
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.8rem;
-    padding: 1rem;
-    color: #ffd700;
-}
-
-#navbar {
-    display: none; /* Shown on logo click (mobile menu style) */
-    flex-direction: column;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-#navbar a {
-    font-size: 1.2rem;
     font-weight: 700;
     color: #ffd700;
-    padding: 1rem 0;
+    text-decoration: none;
 }
 
-/* Larger Screens: show nav inline */
-@media screen and (min-width: 768px) {
-    #navbar {
-        display: flex;
-        background: none;
-        flex-direction: row;
-    }
+/* Right side: hamburger + nav links */
+.header-right {
+    display: flex;
+    align-items: center;
+}
 
-    #navbar a {
-        margin: 0 1.5rem;
-        padding: 1rem 0;
-        font-size: 1.1rem;
+/* Hamburger icon styling */
+.menu-icon {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+/* Each bar in the hamburger */
+.menu-icon .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #ffd700;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Navbar */
+.navbar-links {
+    position: absolute; /* so it can slide in/out */
+    top: 4.5rem;        /* just below header */
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none; /* disable clicks when hidden */
+    transition: all 0.4s ease-in-out;
+}
+
+/* By default, hide the nav in mobile view */
+.navbar-links a {
+    display: block;
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffd700;
+    text-align: right;
+}
+
+/* When nav is open (mobile) */
+.navbar-links.nav-open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Larger screens: show inline nav, hide hamburger */
+@media screen and (min-width: 768px) {
+    .menu-icon {
+        display: none;
     }
+    .navbar-links {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        background: none;
+        opacity: 1; /* visible by default on desktop */
+        transform: none;
+        pointer-events: auto;
+        padding: 0;
+    }
+    .navbar-links a {
+        margin: 0 1rem;
+    }
+}
+
+/* Hide-on-scroll: shifts header up */
+.header-hide {
+    top: -80px; /* or however tall your header is */
 }
 
 /******************************************
@@ -179,6 +237,13 @@ header {
     margin: 0 auto;
     padding-top: 7rem; /* space beneath fixed header */
     padding-bottom: 3rem;
+    max-width: 80vw; /* or 1100px, 1300px — your preference */
+}
+
+@media screen and (min-width: 1400px) {
+    .content-container {
+        max-width:60vw;
+    }
 }
 
 /******************************************

@@ -47,16 +47,30 @@
 <body>
 
 <header>
-    <div class="header">
-        <p id="logo">FH</p>
-        <div id="navbar">
-            <a href="#home">HOME</a>
-            <a href="#about">ABOUT</a>
-            <a href="#projects">RECENT WORK</a>
-            <a href="#contact">CONTACT</a>
+    <div class="header-container">
+        <div class="header-left">
+            <!-- Logo (make it link to #home for convenience) -->
+            <a href="#home" class="logo">FH</a>
+        </div>
+        <div class="header-right">
+            <!-- Hamburger Menu Icon -->
+            <div id="menuIcon" class="menu-icon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <!-- Navbar Items -->
+            <nav id="navbar" class="navbar-links">
+                <a href="#home">HOME</a>
+                <a href="#about">ABOUT</a>
+                <a href="#projects">RECENT WORK</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
         </div>
     </div>
 </header>
+
 <div class="introContainer" id="home">
     <div class="name">
         <h1 class="typewriter" id="name"></h1>
