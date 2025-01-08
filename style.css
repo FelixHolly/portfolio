@@ -2,10 +2,13 @@
 * {
     font-family: 'Roboto', sans-serif;
     color: white;
-    background-color: black;
     font-size: 1rem;
     margin: 0;
     scroll-behavior: smooth;
+}
+
+body{
+    background-color: black;
 }
 
 /* Header Styles */
@@ -198,6 +201,7 @@ a {
     color: #BA55D3;
     margin-bottom: 1em;
     text-shadow: 0 0 black;
+    text-align: center;
 }
 
 .testimonial {
@@ -226,7 +230,7 @@ a {
     flex-direction: column;
     align-items: center;
     gap: 2em;
-    margin: 3rem 0;
+    margin: 10rem 0 0 0;
     border-radius: 20px;
     width: 80vw;
     justify-content: center;
@@ -234,7 +238,6 @@ a {
 
 .content-container > div {
     max-width: 85vw;
-    min-width: 85vw;
 }
 
 /* Section Headings */
@@ -368,12 +371,14 @@ h3 {
 /* Skills Section */
 .skills {
     line-height: 2em;
+    width: 100%;
 }
 
 .skill {
     text-align: left;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    width: 100%;
 }
 
 .skill i {
@@ -414,7 +419,7 @@ h3 {
 
 /* Footer */
 footer {
-    padding: 3em 1em 1em 1em;
+    padding-top: 2rem;
     font-size: 0.8em;
     text-align: center;
 }
@@ -662,9 +667,9 @@ footer p {
     position: relative;
     padding: 1em;
     margin: 1em auto;
-    width: 300px;
     text-align: center;
     overflow: hidden;
+    width: 80%;
 }
 
 .teaser-image img {
@@ -673,38 +678,38 @@ footer p {
     opacity: 0.7;
 }
 
-.project-card-container{
-    display: flex;
-    align-content: center;
+.projects {
+    width: 100%;
+}
+
+.project-card-container {
+    display: grid;
     gap: 1rem;
+    justify-items: center; /* center items horizontally, optional */
+    margin: 2rem auto;
+    /* By default, let's go single-column for smaller devices. */
+    grid-template-columns: 1fr;
+    /* If you want them to expand the width, you can set a max-width or let them fill the page. */
+}
+
+@media screen and (min-width: 600px) {
+    .project-card-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns, each 1 fraction of the available width */
+        max-width: 800px; /* optional: keep them from stretching too wide */
+    }
 }
 
 
 .planet-container {
     position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding-top: 30%; /* Adjust the padding to control the aspect ratio */
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 
-/* Planet Styles */
-.planet-container::before {
-    content: '';
-    position: absolute;
-    top: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150vw; /* Make it larger to cover the width */
-    height: 150vw;
-    border-radius: 50%;
-    box-shadow: inset 0 1px 40px #00BCFF, 0 0 30px rgba(186, 85, 211, 1);
-}
 
 .contact-section {
-    width: 85vw;
-    margin: 3em auto;
+    width: 100%;
     text-align: center;
     border-radius: 10px;
     position: relative;

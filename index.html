@@ -9,24 +9,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+
     <title>Felix Hollndonner</title>
 </head>
 <body>
 
 <header>
     <div class="header">
-        <p id="logo">HF</p>
+        <p id="logo">FH</p>
         <div id="navbar">
-            <a>HOME</a>
-            <a>ABOUT</a>
-            <a>RECENT WORK</a>
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#projects">RECENT WORK</a>
             <a href="#contact">CONTACT</a>
-            <a>LANGUAGE</a>
         </div>
     </div>
 </header>
 
-<div class="introContainer">
+<div id="home" class="introContainer">
     <div id="stars"></div>
     <div class="name">
         <h1 id="name" class="typewriter"></h1>
@@ -38,7 +41,7 @@
 
 <div class="planet-container">
     <div class="content-container">
-        <div class="about-me scroll-effect fade-in-bottom">
+        <div id="about" class="about-me scroll-effect fade-in-bottom">
             <div class="profile-image">
                 <img src="./assets/me.png" alt="Felix Hollndonner">
             </div>
@@ -265,7 +268,7 @@
         </div>
 
         <!-- Portfolio Section -->
-        <div class="projects scroll-effect">
+        <div id="projects" class="projects scroll-effect">
             <h3>Portfolio</h3>
             <div class="project-card-container">
                 <div class="project-card teaser flip-card">
@@ -282,7 +285,7 @@
                         <!-- Back content -->
                         <div class="flip-card-back">
                             <h2>WheelWallet</h2>
-                            <p>A budgeting tool for frequent travelers.</p>
+                            <p>A comprehensive car management tool to organize all your vehicles and streamline paperwork handling in one convenient place.</p>
                             <a href="https://github.com/FelixHolly/WheelWallet" target="_blank">
                                 View on GitHub
                             </a>
@@ -341,10 +344,8 @@
                 <a href="https://github.com/FelixHolly" target="_blank"><i class="fab fa-github"></i></a>
             </div>
         </div>
-
     </div>
 </div>
-
 
 <footer>
     <p>© Felix Hollndonner</p>
