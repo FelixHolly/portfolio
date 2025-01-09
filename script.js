@@ -89,8 +89,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let waveOffset = 0; // how far along the wave we are
     const waveSpeed = 0.02; // speed of horizontal motion
-    const waveAmplitude = 10; // height of wave crest
-    const waveFrequency = 0.02; // wave length (lower = longer waves)
+    const waveAmplitude = 8; // height of wave crest
+    const waveFrequency = 0.009; // wave length (lower = longer waves)
 
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -169,9 +169,9 @@ window.addEventListener('resize', resizeCanvas);
 resizeCanvas();
 
 let waveOffset = 0;
-const waveSpeed = 0.02;
-const waveAmplitude = 30;  // wave “height”
-const waveFrequency = 0.02;
+const waveSpeed = 0.022;
+const waveAmplitude = 10;  // wave “height”
+const waveFrequency = 0.002;
 const verticalOffset = 50; // push wave down 50px from top
 
 function animate() {
