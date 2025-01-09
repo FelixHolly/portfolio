@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Animate name first, then job title
-    typeWriter('name', 'Felix Hollndonner', 100, () => {
+    typeWriter('name', 'Hello, I\'m Felix.', 100, () => {
         setTimeout(() => {
             document.getElementById('job-title').classList.add('typewriter');
-            typeWriter('job-title', 'Fullstack Developer', 100);
+            typeWriter('job-title', 'I\'m a full stack web developer.', 100);
         }, 500);
     });
 
@@ -126,6 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     animate();
+    initBottomWave();
 });
 
 // script.js
@@ -153,3 +154,51 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.documentElement.style.cursor = 'none';
+
+
+const canvas = document.getElementById('waveBottomCanvas');
+const ctx = canvas.getContext('2d');
+
+function resizeCanvas() {
+    // Make the canvas match CSS size
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+}
+
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+
+let waveOffset = 0;
+const waveSpeed = 0.02;
+const waveAmplitude = 30;  // wave “height”
+const waveFrequency = 0.02;
+const verticalOffset = 50; // push wave down 50px from top
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = '#ff926b'; // wave color
+    ctx.beginPath();
+
+    // Start at top-left corner (0,0)
+    ctx.moveTo(0, 0);
+
+    // Draw wave across the entire width
+    for (let x = 0; x <= canvas.width; x++) {
+        // Sine wave
+        const y = Math.sin(x * waveFrequency + waveOffset) * waveAmplitude + verticalOffset;
+        ctx.lineTo(x, y);
+    }
+
+    // Then go down the right side & back to the bottom-left
+    ctx.lineTo(canvas.width, canvas.height);
+    ctx.lineTo(0, canvas.height);
+    ctx.closePath();
+    ctx.fill();
+
+    // Move wave
+    waveOffset += waveSpeed;
+    requestAnimationFrame(animate);
+}
+
+animate();
