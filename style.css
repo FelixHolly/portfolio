@@ -225,7 +225,6 @@ header {
     gap: 2rem;
     width: 80%;
     margin: 0 auto;
-    padding-bottom: 3rem;
     max-width: 80vw; /* or 1100px, 1300px — your preference */
 }
 
