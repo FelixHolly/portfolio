@@ -242,14 +242,15 @@ header {
 ******************************************/
 .about-me {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     gap: 2rem;
     width: 100%;
-    margin-bottom: 2rem;
     opacity: 0; /* For scroll-effect animation */
     transform: translateY(20px);
     transition: all 0.6s ease-in-out;
+    min-height: 100vh;
+    justify-content: center;
 }
 
 .about-me.visible {
@@ -297,60 +298,6 @@ header {
 }
 
 /******************************************
-  PERSONAL INTERESTS
-******************************************/
-.personal-interests {
-    text-align: center;
-    opacity: 0; /* For scroll-effect animation */
-    transform: translateY(20px);
-    transition: all 0.6s ease-in-out;
-}
-
-.personal-interests.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.personal-interests h2 {
-    margin-bottom: 3rem;
-    margin-top: 3rem;
-}
-
-.interests {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 2em;
-}
-
-.interest i {
-    font-size: 2rem;
-    color: #333333;
-    margin-bottom: 0.5em;
-}
-
-.interest p {
-    color: #333333;
-}
-
-/******************************************
-  QUOTE
-******************************************/
-.personal-quote {
-    font-style: italic;
-    color: #333333;
-    margin: 2em 0;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-in-out;
-}
-
-.personal-quote.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/******************************************
   EXPERIENCE SECTION (TIMELINE)
 ******************************************/
 .experiences {
@@ -371,7 +318,7 @@ header {
     content: '';
     position: absolute;
     left: 50%;
-    top: 2rem;
+    top: 1rem;
     bottom: 0;
     width: 2px;
     background: #333333;
@@ -381,7 +328,7 @@ header {
 .timeline-item {
     position: relative;
     width: 50%;
-    padding: 2rem 2em;
+    padding: 0.5rem 2em;
     box-sizing: border-box;
     opacity: 0;
     transition: all 0.6s ease;
@@ -496,6 +443,7 @@ header {
   TESTIMONIALS
 ******************************************/
 .testimonials {
+    min-height: 100vh;
     width: 100%;
     margin-top: 2em;
     text-align: center;
