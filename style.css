@@ -450,6 +450,9 @@ header {
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.6s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .testimonials.visible {
@@ -474,103 +477,96 @@ header {
     text-align: right;
     color: #555555;
 }
-
-/******************************************
-  EDUCATION SECTION
-******************************************/
-.education-section {
-    width: 100%;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-in-out;
-}
-
-.education-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.education-cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5em;
-}
-
-.education-card {
-    background: rgba(255, 255, 255, 0.07);
-    border: 1px solid #333333;
-    border-radius: 10px;
-    padding: 1em;
-    width: 280px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(255, 146, 107, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.education-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0 15px #333333;
-}
-
-.card-icon {
-    font-size: 2rem;
-    color: #333333;
-    margin-bottom: 0.5em;
-}
-
-.education-card h4 {
-    font-size: 1.2em;
-    color: #555555;
-}
-
-.education-card h5 {
-    color: #fdfdfd;
-    font-weight: 400;
-}
-
 /******************************************
   SKILLS SECTION
 ******************************************/
-.skills {
+.skills{
     width: 100%;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-in-out;
 }
-
-.skills.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.skill {
+.skills-grid {
     display: grid;
-    grid-template-columns: 1fr 3fr; /* Icon/text on the left, bar on the right */
-    margin: 1em 0;
-    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    justify-items: center;
 }
 
-.skill-text {
-    margin-left: 0.3em;
+.skill-card {
+    width: 100%;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.skill-bar {
-    margin-left: 1em;
-    background: rgba(255, 255, 255, 0.2);
-    height: 10px;
-    border-radius: 20px;
-    overflow: hidden;
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-.skill-bar span {
-    display: block;
-    height: 100%;
-    background-color: #333333;
-    border-radius: 20px;
+.skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
 }
 
+.skill-card h4 {
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+/* Colors for each skill */
+.skill-card.java .skill-icon {
+    color: #007396; /* Java Blue */
+}
+
+.skill-card.spring-boot .skill-icon {
+    color: #6DB33F; /* Spring Green */
+}
+
+.skill-card.angular .skill-icon {
+    color: #DD0031; /* Angular Red */
+}
+
+.skill-card.sql .skill-icon {
+    color: #00758F; /* SQL Blue */
+}
+
+.skill-card.html-css .skill-icon {
+    color: #E34F26; /* HTML Orange */
+}
+
+.skill-card.javascript .skill-icon {
+    color: #F7DF1E; /* JavaScript Yellow */
+}
+
+.skill-card.scrum .skill-icon {
+    color: #0078D7; /* Scrum Blue */
+}
+
+.skill-card.jira .skill-icon {
+    color: #0052CC; /* Jira Blue */
+}
+.skill-card.linux .skill-icon {
+    color: #FCC624; /* Linux Yellow */
+}
+
+.skill-card.figma .skill-icon {
+    color: #A259FF; /* Figma Purple */
+}
+
+.skill-card.postman .skill-icon {
+    color: #FF6C37; /* Postman Orange */
+}
+
+.skill-card.jest .skill-icon {
+    color: #99424F; /* Jest Burgundy */
+}
+
+.skill-card.junit .skill-icon {
+    color: #25A162; /* JUnit Green */
+}
 /******************************************
   PROJECTS / PORTFOLIO SECTION
 ******************************************/
