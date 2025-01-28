@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // ===== Typewriter effect (existing code) =====
+    // ===== Typewriter Effect =====
     const typeWriter = (elementId, text, speed, callback) => {
         let i = 0;
         const element = document.getElementById(elementId);
@@ -19,71 +19,80 @@ document.addEventListener('DOMContentLoaded', () => {
         type();
     };
 
+    // Add the scroll indicator when typewriter finishes
+    const showScrollIndicator = () => {
+        const scrollIndicator = document.getElementById('scrollIndicator');
+        scrollIndicator.classList.add('visible'); // Add a visible class for animation
+    };
+
     // Animate name first, then job title
     typeWriter('name', 'Hello, I\'m Felix.', 100, () => {
         setTimeout(() => {
             document.getElementById('job-title').classList.add('typewriter');
-            typeWriter('job-title', 'I\'m a full stack web developer.', 100);
+            typeWriter('job-title', 'I\'m a full stack web developer.', 100, showScrollIndicator);
         }, 500);
     });
 
-    // ===== Scroll-into-view fade-in logic (existing code) =====
-    window.addEventListener('scroll', function() {
-        const sections = document.querySelectorAll('.scroll-effect');
-        const screenPosition = window.innerHeight - 100;
-
-        sections.forEach(section => {
-            const position = section.getBoundingClientRect().top;
-            if (position < screenPosition) {
-                section.classList.add('visible');
+    // ===== Scroll-into-view Fade-in Logic with IntersectionObserver =====
+    const options = { root: null, threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
             }
         });
-    });
+    }, options);
 
-    // ===== New Header Logic =====
+    document.querySelectorAll('.scroll-effect').forEach((el) => observer.observe(el));
+
+    // ===== Header Logic =====
     const headerEl = document.querySelector('header');
     const menuIcon = document.getElementById('menuIcon');
     const navbarEl = document.getElementById('navbar');
+    let lastScrollPos = 0;
 
-    // 1. Hamburger Toggling
+    // Hamburger menu toggling
     menuIcon.addEventListener('click', () => {
-        navbarEl.classList.toggle('nav-open');
+        const isOpen = navbarEl.classList.toggle('nav-open');
+        menuIcon.setAttribute('aria-expanded', isOpen);
     });
 
-    // 2. Close nav if a link is clicked (mobile)
-    //    (New code)
+    // Close nav when a link is clicked (mobile)
     const navLinks = navbarEl.querySelectorAll('a');
-    navLinks.forEach(link => {
+    navLinks.forEach((link) => {
         link.addEventListener('click', () => {
             navbarEl.classList.remove('nav-open');
         });
     });
 
-    // 3. Hide-on-scroll logic (optional)
-    let lastScrollPos = 0;
+    // Hide header on scroll down, show on scroll up
+    let ticking = false;
     window.addEventListener('scroll', () => {
         const currentScrollPos = window.pageYOffset;
 
-        // If scrolling down, hide header; if scrolling up, show header
-        if (currentScrollPos > lastScrollPos) {
-            headerEl.classList.add('header-hide');
-        } else {
-            headerEl.classList.remove('header-hide');
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                headerEl.classList.toggle(
+                    'header-hide',
+                    currentScrollPos > lastScrollPos
+                );
+                lastScrollPos = currentScrollPos;
+                ticking = false;
+            });
+            ticking = true;
         }
-        lastScrollPos = currentScrollPos;
     });
-});
 
-document.addEventListener('DOMContentLoaded', () => {
+    // ===== Custom Cursor Logic =====
     const customCursor = document.getElementById('customCursor');
 
-    // Move the div to follow mouse
+    // Move the cursor to follow the mouse
     document.addEventListener('mousemove', (e) => {
         customCursor.style.top = e.clientY + 'px';
         customCursor.style.left = e.clientX + 'px';
     });
 
-    // Optional: Expand the cursor on links/buttons hover
+    // Expand cursor on hover for interactive elements
     const interactiveEls = document.querySelectorAll('a, button, .clickable');
     interactiveEls.forEach((el) => {
         el.addEventListener('mouseenter', () => {
@@ -96,5 +105,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
-document.documentElement.style.cursor = 'none';
