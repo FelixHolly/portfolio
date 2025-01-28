@@ -74,7 +74,7 @@ a {
 }
 
 a:hover {
-    color: lightblue;
+    color: #ffffff;
 }
 /******************************************
   HEADER & NAV (NEW)
@@ -98,13 +98,39 @@ header {
     padding: 0.5rem 1rem;
 }
 
-/* Logo Styles */
-.logo {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #333333;
-    text-decoration: none;
+/* Logo image styles */
+.logo-image {
+    width: auto; /* Maintain aspect ratio */
+    height: 50px; /* Default height */
+    max-height: 10vh; /* Max height is 10% of the viewport height */
+    transition: height 0.3s ease; /* Smooth resizing for responsiveness */
+}
+
+/* Reduce logo size for smaller screens */
+@media screen and (max-width: 768px) {
+    .logo-image {
+        height: 40px; /* Adjust logo height for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo-image {
+        height: 35px; /* Further adjustment for very small screens */
+    }
+}
+
+/* Header container alignment */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+
+/* Header left section to ensure logo stays aligned */
+.header-left {
+    display: flex;
+    align-items: center;
 }
 
 /* Right side: hamburger + nav links */
@@ -283,19 +309,29 @@ header {
 ******************************************/
 .cta-button {
     display: inline-block;
-    padding: 0.8em 1.5em;
-    border-radius: 30px;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    color: #2d002d;
-    background: linear-gradient(135deg, #ffd700, #ff926b);
+    color: #ffffff;
+    background: linear-gradient(135deg, #1E90FF, #007ACC);
     text-decoration: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    text-align: center;
 }
 
 .cta-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(255, 146, 107, 0.6);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #007ACC, #1E90FF);
 }
+
+.cta-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 
 /******************************************
   EXPERIENCE SECTION (TIMELINE)
@@ -381,7 +417,7 @@ header {
 
 .timeline-content h4 {
     margin: 0.5em 0;
-    color: #555555;
+    color: #1E90FF;
 }
 
 .timeline-content h5 {
@@ -567,6 +603,7 @@ header {
 .skill-card.junit .skill-icon {
     color: #25A162; /* JUnit Green */
 }
+
 /******************************************
   PROJECTS / PORTFOLIO SECTION
 ******************************************/
@@ -601,6 +638,7 @@ header {
 /******************************************
   FLIP-CARD (PROJECT TEASER)
 ******************************************/
+
 .flip-card {
     perspective: 1000px;
     margin: 2rem auto;         /* Center it */
@@ -662,6 +700,7 @@ header {
 /******************************************
   CONTACT SECTION
 ******************************************/
+
 .contact-section {
     width: 100%;
     text-align: center;
@@ -715,19 +754,22 @@ header {
 }
 
 .contact-form button {
-    background: linear-gradient(135deg, #ffd700, #ff926b);
+    background: linear-gradient(135deg, #1E90FF, #007ACC);
     border: none;
     border-radius: 4px;
     padding: 0.7em 1.2em;
     font-size: 1em;
     font-weight: bold;
-    color: #2d002d;
+    color: #ffffff;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .contact-form button:hover {
-    background: linear-gradient(135deg, #f6ef12, #ffa382);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #007ACC, #1E90FF);
 }
 
 .social-links {
@@ -749,6 +791,7 @@ header {
 /******************************************
   FOOTER
 ******************************************/
+
 footer {
     text-align: center;
     padding: 1rem 0;
@@ -759,6 +802,7 @@ footer {
 /******************************************
   SCROLL-EFFECT HELPERS
 ******************************************/
+
 .scroll-effect {
     opacity: 0;
     transform: translateY(20px);
