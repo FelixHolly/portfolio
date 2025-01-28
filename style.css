@@ -1,6 +1,17 @@
 /******************************************
   GLOBAL STYLES
 ******************************************/
+
+:root {
+    --primary-color: #1E90FF;
+    --secondary-color: #007ACC;
+    --accent-color: #555555;
+    --background-light: #f9f9f9;
+    --font-family-base: 'Poppins', sans-serif;
+    --font-family-heading: 'Montserrat', sans-serif;
+    --header-height: 80px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -95,7 +106,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem calc(var(--header-height) / 4);
 }
 
 /* Logo image styles */
@@ -117,14 +128,6 @@ header {
     .logo-image {
         height: 35px; /* Further adjustment for very small screens */
     }
-}
-
-/* Header container alignment */
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
 }
 
 /* Header left section to ensure logo stays aligned */
@@ -247,6 +250,10 @@ header {
 /******************************************
   CONTENT CONTAINER
 ******************************************/
+.section{
+    margin-top: 5rem;
+}
+
 .content-container {
     display: flex;
     flex-direction: column;
@@ -497,11 +504,12 @@ header {
 }
 
 .testimonial {
-    background: lightgray;
+    background: var(--background-light);
     margin: 2em auto;
     padding: 1.5em;
     max-width: 600px;
-    border-left: 4px solid #333333;
+    border-left: 4px solid;
+    border-left-color: var(--primary-color);
     text-align: left;
 }
 
@@ -528,7 +536,8 @@ header {
 
 .skill-card {
     width: 100%;
-    background: #f9f9f9;
+    background: var(--background-light);
+    color: var(--accent-color);
     border: 1px solid #ddd;
     border-radius: 12px;
     padding: 1.5rem;
@@ -818,13 +827,47 @@ footer {
     position: fixed;
     top: 0;
     left: 0;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     pointer-events: none; /* let clicks pass through */
-    border: 2px solid #555555;
+    border: 2px solid;
+    border-color: var(--accent-color);
     border-radius: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
     transition: background-color 0.2s ease, border 0.2s ease;
     z-index: 1000;
 }
 
+a:hover, button:hover {
+    #customCursor {
+        transform: translate(-50%, -50%) scale(1.5);
+    }
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 20px; /* Adjust to place it near the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.scroll-indicator.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.arrow-svg {
+    animation: bounce-svg 1.5s infinite;
+}
+
+@keyframes bounce-svg {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
