@@ -25,11 +25,6 @@ body {
     font-family: var(--font-family-base), sans-serif;
     cursor: none; /* Hide system cursor */
 }
-
-/* ABSTRACT BACKGROUND
-   Multiple radial gradients for a layered, artistic vibe.
-   The final color sets the “main” background color behind them.
-*/
 body {
     background-color: #ffffff;
 }
@@ -54,16 +49,16 @@ h1 {
 h2, h3 {
     position: relative;
     text-align: center;
-    margin-bottom: 2rem; /* Add spacing below the title */
+    margin-bottom: 2rem;
 }
 
 h3::after {
     content: "";
     display: block;
-    width: 40px; /* Adjust width for the underline */
-    height: 3px; /* Adjust thickness for the underline */
-    background-color: var(--primary-color); /* Match your preferred color */
-    margin: 10px auto 0; /* Space between the title and the line */
+    width: 40px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 10px auto 0;
     border-radius: 25px;
 }
 
@@ -101,7 +96,7 @@ header {
     box-shadow: 0 -4px 7px grey;
 }
 
-/* Container holds logo and menu icon */
+
 .header-container {
     display: flex;
     align-items: center;
@@ -111,22 +106,22 @@ header {
 
 /* Logo image styles */
 .logo-image {
-    width: auto; /* Maintain aspect ratio */
-    height: 50px; /* Default height */
-    max-height: 10vh; /* Max height is 10% of the viewport height */
-    transition: height 0.3s ease; /* Smooth resizing for responsiveness */
+    width: auto;
+    height: 50px;
+    max-height: 10vh;
+    transition: height 0.3s ease;
 }
 
 /* Reduce logo size for smaller screens */
 @media screen and (max-width: 768px) {
     .logo-image {
-        height: 40px; /* Adjust logo height for smaller screens */
+        height: 40px;
     }
 }
 
 @media screen and (max-width: 480px) {
     .logo-image {
-        height: 35px; /* Further adjustment for very small screens */
+        height: 35px;
     }
 }
 
@@ -164,15 +159,15 @@ header {
 
 /* Navbar */
 .navbar-links {
-    position: absolute; /* so it can slide in/out */
-    top: 4.5rem;        /* just below header */
+    position: absolute;
+    top: 4.5rem;
     right: 1rem;
     background: rgba(0, 0, 0, 0.7);
     padding: 1rem 2rem;
     border-radius: 8px;
     opacity: 0;
     transform: translateY(-20px);
-    pointer-events: none; /* disable clicks when hidden */
+    pointer-events: none;
     transition: all 0.4s ease-in-out;
 }
 
@@ -192,7 +187,7 @@ header {
     pointer-events: auto;
 }
 
-/* Larger screens: show inline nav, hide hamburger */
+
 @media screen and (min-width: 768px) {
     .menu-icon {
         display: none;
@@ -202,7 +197,7 @@ header {
         display: flex;
         flex-direction: row;
         background: none;
-        opacity: 1; /* visible by default on desktop */
+        opacity: 1;
         transform: none;
         pointer-events: auto;
         padding: 0;
@@ -215,7 +210,7 @@ header {
 
 /* Hide-on-scroll: shifts header up */
 .header-hide {
-    top: -80px; /* or however tall your header is */
+    top: -80px;
 }
 
 /******************************************
@@ -234,27 +229,27 @@ header {
     background-repeat: no-repeat;
 }
 
-/* Dark (or light) overlay to help text stand out */
+
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.3); /* Adjust darkness as needed */
-    z-index: 1; /* Ensures overlay is above the image, but below text */
+    background: rgba(255, 255, 255, 0.3);
+    z-index: 1;
     box-shadow: 0 0 12px #000000FF;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2;           /* Above the overlay */
+    z-index: 2;
     color: #fff;
-    max-width: 800px;     /* Keep text narrower for readability */
+    max-width: 800px;
     padding: 0 1.5rem;
 }
 
-/* Adjust headings for a clean, minimal look */
+
 .hero-content h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
@@ -270,16 +265,12 @@ header {
     font-weight: 400;
 }
 
-/* Keep your scroll indicator styling as is,
-   or slightly reposition for better placement over overlay */
 #scrollIndicator {
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
 }
-
-/* The rest of your existing CSS can remain the same. */
 
 /******************************************
   CONTENT CONTAINER
@@ -295,7 +286,7 @@ header {
     gap: 2rem;
     width: 80%;
     margin: 0 auto;
-    max-width: 80vw; /* or 1100px, 1300px — your preference */
+    max-width: 80vw;
 }
 
 @media screen and (min-width: 1400px) {
@@ -313,7 +304,7 @@ header {
     align-items: center;
     gap: 2rem;
     width: 100%;
-    opacity: 0; /* For scroll-effect animation */
+    opacity: 0;
     transform: translateY(20px);
     transition: all 0.6s ease-in-out;
     min-height: 100vh;
@@ -486,7 +477,7 @@ header {
     color: #333333;
 }
 
-/* Responsive timeline */
+
 @media screen and (max-width: 800px) {
     .timeline::before {
         left: 0;
@@ -597,54 +588,54 @@ header {
 
 /* Colors for each skill */
 .skill-card.java .skill-icon {
-    color: #007396; /* Java Blue */
+    color: #007396;
 }
 
 .skill-card.spring-boot .skill-icon {
-    color: #6DB33F; /* Spring Green */
+    color: #6DB33F;
 }
 
 .skill-card.angular .skill-icon {
-    color: #DD0031; /* Angular Red */
+    color: #DD0031;
 }
 
 .skill-card.sql .skill-icon {
-    color: #00758F; /* SQL Blue */
+    color: #00758F;
 }
 
 .skill-card.html-css .skill-icon {
-    color: #E34F26; /* HTML Orange */
+    color: #E34F26;
 }
 
 .skill-card.javascript .skill-icon {
-    color: #F7DF1E; /* JavaScript Yellow */
+    color: #F7DF1E;
 }
 
 .skill-card.scrum .skill-icon {
-    color: #0078D7; /* Scrum Blue */
+    color: #0078D7;
 }
 
 .skill-card.jira .skill-icon {
-    color: #0052CC; /* Jira Blue */
+    color: #0052CC;
 }
 .skill-card.linux .skill-icon {
-    color: #FCC624; /* Linux Yellow */
+    color: #FCC624;
 }
 
 .skill-card.figma .skill-icon {
-    color: #A259FF; /* Figma Purple */
+    color: #A259FF;
 }
 
 .skill-card.postman .skill-icon {
-    color: #FF6C37; /* Postman Orange */
+    color: #FF6C37;
 }
 
 .skill-card.jest .skill-icon {
-    color: #99424F; /* Jest Burgundy */
+    color: #99424F;
 }
 
 .skill-card.junit .skill-icon {
-    color: #25A162; /* JUnit Green */
+    color: #25A162;
 }
 
 /******************************************
@@ -687,7 +678,7 @@ header {
     flex-direction: column;
     justify-content: center;
 }
-/* Container that holds multiple projects */
+
 .project-card-container {
     display: flex;
     flex-direction: column;
@@ -696,31 +687,31 @@ header {
     margin: 0 auto;
 }
 
-/* Each individual project card */
+
 .project-card {
     display: flex;
-    flex-direction: row;    /* On larger screens: side by side */
+    flex-direction: row;
     align-items: center;
     gap: 2rem;
 }
 
-/* Image container */
+
 .project-image img {
     width: 69%;
     height: auto;
     border-radius: 8px;
     object-fit: cover;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    max-width: 500px; /* Restrict the image width a bit */
+    max-width: 500px;
 }
 
-/* Info column (title, description, link) */
+
 .project-info {
-    flex: 1; /* Let this grow/shrink to fill space */
+    flex: 1;
     text-align: left;
 }
 
-/* Headings, paragraphs, links styling as needed */
+
 .project-info h2 {
     margin-bottom: 0.5rem;
     font-family: 'Montserrat', sans-serif;
@@ -754,13 +745,13 @@ header {
     color: #fff;
 }
 
-/* Responsive Adjustments for Smaller Screens */
+
 @media screen and (max-width: 768px) {
     .project-info {
         text-align: center;
     }
     .project-card {
-        flex-direction: column;  /* Stack the image and info */
+        flex-direction: column;
         text-align: center;
     }
 
@@ -895,7 +886,7 @@ footer {
     left: 0;
     width: 15px;
     height: 15px;
-    pointer-events: none; /* let clicks pass through */
+    pointer-events: none;
     border: 2px solid;
     border-color: var(--accent-color);
     border-radius: 50%;
@@ -912,7 +903,7 @@ a:hover, button:hover {
 
 .scroll-indicator {
     position: absolute;
-    bottom: 20px; /* Adjust to place it near the bottom */
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
