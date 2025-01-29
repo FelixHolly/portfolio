@@ -22,10 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add the scroll indicator when typewriter finishes
     const showScrollIndicator = () => {
         const scrollIndicator = document.getElementById('scrollIndicator');
-        scrollIndicator.classList.add('visible'); // Add a visible class for animation
+        scrollIndicator.classList.add('visible');
     };
 
-    // Animate name first, then job title
     typeWriter('name', 'Hello, I\'m Felix.', 100, () => {
         setTimeout(() => {
             document.getElementById('job-title').classList.add('typewriter');
@@ -86,7 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // ===== Custom Cursor Logic =====
     const customCursor = document.getElementById('customCursor');
 
-    // Move the cursor to follow the mouse
     document.addEventListener('mousemove', (e) => {
         customCursor.style.top = e.clientY + 'px';
         customCursor.style.left = e.clientX + 'px';
