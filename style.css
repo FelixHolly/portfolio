@@ -22,7 +22,7 @@
 html,
 body {
     height: 100%;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-family-base), sans-serif;
     cursor: none; /* Hide system cursor */
 }
 
@@ -57,12 +57,12 @@ h2, h3 {
     margin-bottom: 2rem; /* Add spacing below the title */
 }
 
-h2::after, h3::after {
+h3::after {
     content: "";
     display: block;
     width: 40px; /* Adjust width for the underline */
     height: 3px; /* Adjust thickness for the underline */
-    background-color: #1E90FF; /* Match your preferred color */
+    background-color: var(--primary-color); /* Match your preferred color */
     margin: 10px auto 0; /* Space between the title and the line */
     border-radius: 25px;
 }
@@ -72,7 +72,7 @@ li,
 a,
 span,
 blockquote {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-family-base), sans-serif;
     font-weight: 300;
     color: #333333;
     line-height: 1.6;
@@ -222,35 +222,64 @@ header {
   INTRO / HERO SECTION
 ******************************************/
 .introContainer {
+    position: relative;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 10%;
-    text-align: left;
-    position: relative;
-
+    text-align: center;
     background-image: url("./assets/background.jpeg");
-    background-size: cover;       /* Ensure the image covers the entire container */
-    background-position: center;  /* Keep it centered on all screen sizes */
-    background-repeat: no-repeat; /* Prevent tiling/repeating */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.name,
-.job-title {
-    padding: 1.3rem 0;
+/* Dark (or light) overlay to help text stand out */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3); /* Adjust darkness as needed */
+    z-index: 1; /* Ensures overlay is above the image, but below text */
+    box-shadow: 0 0 12px #000000FF;
 }
 
-.name h1 {
-    font-size: 2.2rem;
+.hero-content {
+    position: relative;
+    z-index: 2;           /* Above the overlay */
+    color: #fff;
+    max-width: 800px;     /* Keep text narrower for readability */
+    padding: 0 1.5rem;
 }
 
-.job-title h2 {
+/* Adjust headings for a clean, minimal look */
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.hero-content h2 {
     font-size: 1.5rem;
-    color: #333333;
-    height: 2rem;
+    margin-top: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 }
+
+/* Keep your scroll indicator styling as is,
+   or slightly reposition for better placement over overlay */
+#scrollIndicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* The rest of your existing CSS can remain the same. */
 
 /******************************************
   CONTENT CONTAINER
@@ -325,7 +354,7 @@ header {
     font-size: 1.1rem;
     font-weight: 700;
     color: #ffffff;
-    background: linear-gradient(135deg, #1E90FF, #007ACC);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     text-decoration: none;
     border-radius: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -336,7 +365,7 @@ header {
 .cta-button:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(135deg, #007ACC, #1E90FF);
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
 }
 
 .cta-button:active {
@@ -429,7 +458,7 @@ header {
 
 .timeline-content h4 {
     margin: 0.5em 0;
-    color: #1E90FF;
+    color: var(--primary-color);
 }
 
 .timeline-content h5 {
@@ -650,65 +679,97 @@ header {
 }
 
 /******************************************
-  FLIP-CARD (PROJECT TEASER)
+  PROJECTS SECTION
 ******************************************/
-
-.flip-card {
-    perspective: 1000px;
-    margin: 2rem auto;         /* Center it */
-    /* Let the card’s height expand based on content */
-}
-
-.flip-card-inner {
-    position: relative;
-    transition: transform 0.6s ease;
-    transform-style: preserve-3d;
-
-    /* Let height be dictated by front/back content. */
-    /* If you want a min-height, you can set it here. */
-}
-
-.flip-card-front,
-.flip-card-back {
-    /* Remove position: absolute. Instead, let them stack. */
-    position: relative;
-    display: block;
-    backface-visibility: hidden;
-    border: 1px solid #555555;
-    border-radius: 10px;
-    padding: 1rem;
-
-    /* The flip effect might require we rotate the back. */
-}
-
-.flip-card-back {
-    background: rgba(255, 255, 255, 0.08);
-    transform: rotateY(180deg); /* so it’s reversed initially */
-    position: absolute;         /* only the back is absolute,
-                                 so it sits on top, reversed  */
-    top: 0; left: 0;
-    width: 100%; /* match parent width */
-    border-radius: 10px;
-    backface-visibility: hidden;
-    height: 100%;
+.projects{
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
-/* On hover, rotate the container to show the back side. */
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
+/* Container that holds multiple projects */
+.project-card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
+/* Each individual project card */
+.project-card {
+    display: flex;
+    flex-direction: row;    /* On larger screens: side by side */
+    align-items: center;
+    gap: 2rem;
+}
 
-/* Ensure the teaser image fits well */
-.teaser-image img {
-    width: 100%;
+/* Image container */
+.project-image img {
+    width: 69%;
     height: auto;
-    display: block;
+    border-radius: 8px;
     object-fit: cover;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    max-width: 500px; /* Restrict the image width a bit */
+}
+
+/* Info column (title, description, link) */
+.project-info {
+    flex: 1; /* Let this grow/shrink to fill space */
+    text-align: left;
+}
+
+/* Headings, paragraphs, links styling as needed */
+.project-info h2 {
     margin-bottom: 0.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.project-info p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #444;
+}
+
+.project-info a {
+    display: inline-block;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.project-info a:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+/* Responsive Adjustments for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .project-info {
+        text-align: center;
+    }
+    .project-card {
+        flex-direction: column;  /* Stack the image and info */
+        text-align: center;
+    }
+
+    .project-image img {
+        max-width: 100%;
+    }
+    .project-info h2 {
+        text-align: center;
+    }
 }
 
 /******************************************
@@ -763,12 +824,12 @@ header {
     background: #f0f0f0;
     color: #333;
     padding: 0.5em;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-family-base), sans-serif;
     cursor: none;
 }
 
 .contact-form button {
-    background: linear-gradient(135deg, #1E90FF, #007ACC);
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     border: none;
     border-radius: 4px;
     padding: 0.7em 1.2em;
@@ -783,7 +844,7 @@ header {
 .contact-form button:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(135deg, #007ACC, #1E90FF);
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
 }
 
 .social-links {
