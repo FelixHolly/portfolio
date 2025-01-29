@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     interactiveEls.forEach((el) => {
         el.addEventListener('mouseenter', () => {
             customCursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
-            customCursor.style.backgroundColor = 'rgba(255, 146, 107, 0.3)';
+            customCursor.style.backgroundColor = 'rgba(30, 144, 255, 0.3)';
         });
         el.addEventListener('mouseleave', () => {
             customCursor.style.transform = 'translate(-50%, -50%) scale(1)';

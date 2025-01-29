@@ -58,21 +58,26 @@
     </div>
 </header>
 
+<!-- HERO / INTRO SECTION -->
 <div class="introContainer" id="home">
-    <div class="name">
+    <!-- Overlay to darken/lighten the background for readability -->
+    <div class="hero-overlay"></div>
+
+    <!-- Hero text content (still using typewriter IDs) -->
+    <div class="hero-content">
         <h1 class="typewriter" id="name"></h1>
+        <h2 class="typewriter" id="job-title"></h2>
     </div>
-    <div class="job-title">
-        <h1 class="typewriter" id="job-title"></h1>
-    </div>
+
+    <!-- Keep your scroll indicator SVG if desired -->
     <div id="scrollIndicator" class="scroll-indicator">
         <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                width="180"
+                height="60"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke="#333"
+                stroke="#fff"
                 stroke-width="2"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -82,6 +87,7 @@
         </svg>
     </div>
 </div>
+
 
 <div class="content-container">
     <div class="about-me scroll-effect fade-in-bottom section" id="about">
@@ -166,7 +172,7 @@
         </div>
     </div>
 
-    <div class="experiences section">
+    <div class="experiences section scroll-effect">
         <h3>Experience</h3>
         <div class="timeline">
             <!-- Experience 1 -->
@@ -239,7 +245,7 @@
     </div>
 
     <div class="testimonials scroll-effect fade-in-left section">
-        <h2>Testimonials</h2>
+        <h3>Testimonials</h3>
         <div class="testimonial">
             <p>"Felix Hollndonner demonstrated his willingness to learn, flexibility, and strong comprehension
                 skills by quickly adapting to new technologies such as Angular. His technically sound and
@@ -259,51 +265,26 @@
     </div>
 
     <!-- Portfolio Section -->
+    <!-- Portfolio Section -->
     <div class="projects scroll-effect section" id="projects">
         <h3>Portfolio</h3>
+
         <div class="project-card-container">
-            <div class="project-card teaser flip-card">
-                <div class="flip-card-inner">
-                    <!-- Front content -->
-                    <div class="flip-card-front">
-                        <div class="teaser-image">
-                            <img alt="WheelWallet Preview" src="assets/wheel-wallet.png">
-                        </div>
-                        <h2>WheelWallet</h2>
-                        <p>Hover me!</p>
-                    </div>
-
-                    <!-- Back content -->
-                    <div class="flip-card-back">
-                        <h2>WheelWallet</h2>
-                        <p>A comprehensive car management tool to organize all your vehicles and streamline
-                            paperwork handling in one convenient place.</p>
-                        <a href="https://github.com/FelixHolly/WheelWallet" target="_blank">
-                            View on GitHub
-                        </a>
-                    </div>
+            <!-- Project 1 -->
+            <div class="project-card">
+                <!-- Image Column -->
+                <div class="project-image">
+                    <img src="assets/wheel-wallet.png" alt="WheelWallet Preview"/>
                 </div>
-            </div>
 
-            <div class="project-card teaser flip-card">
-                <div class="flip-card-inner">
-                    <!-- Front content -->
-                    <div class="flip-card-front">
-                        <div class="teaser-image">
-                            <img alt="WheelWallet Preview" src="assets/wheel-wallet.png">
-                        </div>
-                        <h2>WheelWallet</h2>
-                        <p>Hover me!</p>
-                    </div>
-
-                    <!-- Back content -->
-                    <div class="flip-card-back">
-                        <h2>WheelWallet</h2>
-                        <p>A budgeting tool for frequent travelers.</p>
-                        <a href="https://github.com/FelixHolly/WheelWallet" target="_blank">
-                            View on GitHub
-                        </a>
-                    </div>
+                <!-- Info Column -->
+                <div class="project-info">
+                    <h2>WheelWallet</h2>
+                    <p>
+                        A comprehensive car management tool to organize all your vehicles and
+                        streamline paperwork handling in one convenient place.
+                    </p>
+                    <a href="https://github.com/FelixHolly/WheelWallet" target="_blank">View on GitHub</a>
                 </div>
             </div>
         </div>
