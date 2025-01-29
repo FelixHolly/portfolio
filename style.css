@@ -230,6 +230,11 @@ header {
     padding: 0 10%;
     text-align: left;
     position: relative;
+
+    background-image: url("./assets/background.jpeg");
+    background-size: cover;       /* Ensure the image covers the entire container */
+    background-position: center;  /* Keep it centered on all screen sizes */
+    background-repeat: no-repeat; /* Prevent tiling/repeating */
 }
 
 .name,
@@ -871,3 +876,5 @@ a:hover, button:hover {
         transform: translateY(-10px);
     }
 }
+
+
