@@ -396,7 +396,7 @@ header {
 .timeline-item {
     position: relative;
     width: 50%;
-    padding: 0.5rem 2em;
+    padding: 1rem 2em;
     box-sizing: border-box;
     opacity: 0;
     transition: all 0.6s ease;
@@ -533,7 +533,7 @@ header {
     margin: 2em auto;
     padding: 1.5em;
     max-width: 600px;
-    border-left: 4px solid;
+    border-left: 2px solid;
     border-left-color: var(--primary-color);
     text-align: left;
 }
@@ -752,6 +752,78 @@ header {
     background-color: var(--primary-color);
     color: #fff;
 }
+
+/* UNDER-CONSTRUCTION WRAP EFFECT */
+.under-construction {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Keep Image at 69% Width */
+.under-construction img {
+    display: block;
+    width: 69%; /* Ensures image stays 69% width */
+    max-width: 500px; /* Prevents it from getting too large */
+    filter: grayscale(100%) brightness(0.6);
+    transition: filter 0.5s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.tape {
+    position: absolute;
+    width: 120%;
+    font-size: 1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 0;
+    background: repeating-linear-gradient(
+            45deg,
+            black,
+            black 10px,
+            yellow 10px,
+            yellow 20px
+    );
+    color: white;
+    text-shadow: 2px 2px 3px black, -2px -2px 3px black;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.6s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+
+/* Tape Positions */
+.tape-top {
+    top: 10%;
+    left: -10%;
+    transform: rotate(-15deg);
+}
+
+.tape-bottom {
+    bottom: 10%;
+    left: -10%;
+    transform: rotate(15deg);
+}
+
+/* Unwrap Effect */
+.under-construction:hover img {
+    filter: none;
+    transform: scale(1.05);
+}
+
+.under-construction:hover .tape-top {
+    transform: translateY(-150%) rotate(-15deg);
+    opacity: 0;
+}
+
+.under-construction:hover .tape-bottom {
+    transform: translateY(150%) rotate(15deg);
+    opacity: 0;
+}
+
 
 
 @media screen and (max-width: 768px) {
