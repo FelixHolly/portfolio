@@ -543,9 +543,12 @@ header {
 }
 
 .testimonial .author {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+    color: #888;
     text-align: right;
-    color: #555555;
 }
+
 /******************************************
   SKILLS SECTION
 ******************************************/
@@ -585,56 +588,61 @@ header {
     margin-bottom: 0.5rem;
     color: #555;
 }
+.skill-card .skill-icon {
+    color: #555; /* Default grey color */
+    transition: color 0.3s ease-in-out;
+}
 
-/* Colors for each skill */
-.skill-card.java .skill-icon {
+/* Assign specific highlight colors */
+.skill-card.java:hover .skill-icon {
     color: #007396;
 }
 
-.skill-card.spring-boot .skill-icon {
+.skill-card.spring-boot:hover .skill-icon {
     color: #6DB33F;
 }
 
-.skill-card.angular .skill-icon {
+.skill-card.angular:hover .skill-icon {
     color: #DD0031;
 }
 
-.skill-card.sql .skill-icon {
+.skill-card.sql:hover .skill-icon {
     color: #00758F;
 }
 
-.skill-card.html-css .skill-icon {
+.skill-card.html-css:hover .skill-icon {
     color: #E34F26;
 }
 
-.skill-card.javascript .skill-icon {
+.skill-card.javascript:hover .skill-icon {
     color: #F7DF1E;
 }
 
-.skill-card.scrum .skill-icon {
+.skill-card.scrum:hover .skill-icon {
     color: #0078D7;
 }
 
-.skill-card.jira .skill-icon {
+.skill-card.jira:hover .skill-icon {
     color: #0052CC;
 }
-.skill-card.linux .skill-icon {
+
+.skill-card.linux:hover .skill-icon {
     color: #FCC624;
 }
 
-.skill-card.figma .skill-icon {
+.skill-card.figma:hover .skill-icon {
     color: #A259FF;
 }
 
-.skill-card.postman .skill-icon {
+.skill-card.postman:hover .skill-icon {
     color: #FF6C37;
 }
 
-.skill-card.jest .skill-icon {
+.skill-card.jest:hover .skill-icon {
     color: #99424F;
 }
 
-.skill-card.junit .skill-icon {
+.skill-card.junit:hover .skill-icon {
     color: #25A162;
 }
 
@@ -658,7 +666,7 @@ header {
     display: grid;
     gap: 1rem;
     justify-items: center;
-    margin: 0 auto;
+    margin: 2rem auto;
     grid-template-columns: 1fr;
 }
 
@@ -684,7 +692,7 @@ header {
     flex-direction: column;
     gap: 2rem;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 2rem auto;
 }
 
 
