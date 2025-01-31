@@ -25,11 +25,17 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollIndicator.classList.add('visible');
     };
 
-    typeWriter('name', 'Hello, I\'m Felix.', 100, () => {
+    // Wait for the fade animation to complete before starting typewriter effect
+    const introContainer = document.querySelector('.introContainer');
+    introContainer.addEventListener('animationend', () => {
         setTimeout(() => {
-            document.getElementById('job-title').classList.add('typewriter');
-            typeWriter('job-title', 'I\'m a full stack web developer.', 100, showScrollIndicator);
-        }, 500);
+            typeWriter('name', 'Hello, I\'m Felix.', 100, () => {
+                setTimeout(() => {
+                    document.getElementById('job-title').classList.add('typewriter');
+                    typeWriter('job-title', 'I\'m a full stack web developer.', 100, showScrollIndicator);
+                }, 800);
+            });
+        }, 200); // Slight delay after animation completion
     });
 
     // ===== Scroll-into-view Fade-in Logic with IntersectionObserver =====
