@@ -237,8 +237,18 @@ header {
     width: 100%;
     height: 100%;
     background: rgba(255, 255, 255, 0.3);
+    animation: overlayFade 2s ease-in-out forwards;
     z-index: 1;
     box-shadow: 0 0 12px #000000FF;
+}
+
+@keyframes overlayFade {
+    0% {
+        background: rgba(255, 255, 255, 0); /* Transparent at start */
+    }
+    100% {
+        background: rgba(255, 255, 255, 0.3); /* Final overlay color */
+    }
 }
 
 .hero-content {
@@ -256,6 +266,8 @@ header {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px black;
 }
 
 .hero-content h2 {
@@ -263,6 +275,8 @@ header {
     margin-top: 0.5rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px black;
 }
 
 #scrollIndicator {
