@@ -88,24 +88,44 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // ===== Custom Cursor Logic =====
     const customCursor = document.getElementById('customCursor');
 
-    document.addEventListener('mousemove', (e) => {
-        customCursor.style.top = e.clientY + 'px';
-        customCursor.style.left = e.clientX + 'px';
-    });
+    const updateCursorVisibility = () => {
+        if (window.innerWidth >= 1024) {
+            document.body.style.cursor = 'none';
+            customCursor.style.display = 'block';
+        } else {
+            document.body.style.cursor = 'default';
+            customCursor.style.display = 'none';
+        }
+    };
 
-    // Expand cursor on hover for interactive elements
-    const interactiveEls = document.querySelectorAll('a, button, .clickable');
-    interactiveEls.forEach((el) => {
-        el.addEventListener('mouseenter', () => {
-            customCursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
-            customCursor.style.backgroundColor = 'rgba(30, 144, 255, 0.3)';
+    updateCursorVisibility();
+
+    window.addEventListener('resize', updateCursorVisibility);
+
+    if (customCursor) {
+        document.addEventListener('mousemove', (e) => {
+            if (window.innerWidth >= 1024) {
+                customCursor.style.top = `${e.clientY}px`;
+                customCursor.style.left = `${e.clientX}px`;
+            }
         });
-        el.addEventListener('mouseleave', () => {
-            customCursor.style.transform = 'translate(-50%, -50%) scale(1)';
-            customCursor.style.backgroundColor = 'transparent';
+
+        const interactiveEls = document.querySelectorAll('a, button, .clickable');
+        interactiveEls.forEach((el) => {
+            el.addEventListener('mouseenter', () => {
+                if (window.innerWidth >= 1024) {
+                    customCursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
+                    customCursor.style.backgroundColor = 'rgba(30, 144, 255, 0.3)';
+                }
+            });
+            el.addEventListener('mouseleave', () => {
+                if (window.innerWidth >= 1024) {
+                    customCursor.style.transform = 'translate(-50%, -50%) scale(1)';
+                    customCursor.style.backgroundColor = 'transparent';
+                }
+            });
         });
-    });
+    }
 });
