@@ -237,7 +237,7 @@ header {
     width: 100%;
     height: 100%;
     background: rgba(255, 255, 255, 0.3);
-    animation: overlayFade 2s ease-in-out forwards;
+    animation: overlayFade 1s ease-in-out forwards;
     z-index: 1;
     box-shadow: 0 0 12px #000000FF;
 }
@@ -990,6 +990,15 @@ footer p {
     transform: translate(-50%, -50%) scale(1);
     transition: background-color 0.2s ease, border 0.2s ease;
     z-index: 1000;
+}
+
+@media screen and (max-width: 1023px) {
+    body {
+        cursor: default;
+    }
+    #customCursor {
+        display: none;
+    }
 }
 
 a:hover, button:hover {
