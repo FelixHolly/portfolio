@@ -571,37 +571,46 @@ header {
 }
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* More compact grid */
+    gap: 1rem; /* Reduce gap for tighter layout */
     justify-items: center;
+    max-width: 800px; /* Restrict width for better alignment */
+    margin: 0 auto;
 }
 
 .skill-card {
     width: 100%;
+    max-width: 130px;
     background: var(--background-light);
     color: var(--accent-color);
     border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 1.5rem;
+    border-radius: 8px;
+    padding: 1rem;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .skill-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .skill-icon {
-    font-size: 2.5rem;
+    font-size: 1.8rem; /* Smaller icons */
     margin-bottom: 0.5rem;
 }
 
 .skill-card h4 {
+    font-size: 0.9rem; /* Smaller text */
     margin-bottom: 0.5rem;
     color: #555;
 }
+
 .skill-card .skill-icon {
     color: #555; /* Default grey color */
     transition: color 0.3s ease-in-out;
@@ -624,8 +633,12 @@ header {
     color: #00758F;
 }
 
-.skill-card.html-css:hover .skill-icon {
+.skill-card.html:hover .skill-icon {
     color: #E34F26;
+}
+
+.skill-card.css:hover .skill-icon {
+    color: #1572B6;
 }
 
 .skill-card.javascript:hover .skill-icon {
@@ -771,7 +784,6 @@ header {
 .under-construction {
     position: relative;
     overflow: hidden;
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
