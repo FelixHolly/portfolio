@@ -908,6 +908,8 @@ header {
     gap: 1em;
     max-width: 400px;
     margin: 0 auto 2em;
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-form label {
