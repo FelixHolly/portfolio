@@ -23,7 +23,7 @@ html,
 body {
     height: 100%;
     font-family: var(--font-family-base), sans-serif;
-    cursor: none; /* Hide system cursor */
+    cursor: none;
 }
 body {
     background-color: #ffffff;
@@ -36,7 +36,7 @@ h1,
 h2,
 h3,
 h4 {
-    /* Montserrat for headings */
+
     font-family: 'Montserrat', sans-serif;
     color: #333333;
     letter-spacing: 1px;
@@ -104,7 +104,7 @@ header {
     padding: 0.5rem calc(var(--header-height) / 4);
 }
 
-/* Logo image styles */
+
 .logo-image {
     width: auto;
     height: 50px;
@@ -112,7 +112,7 @@ header {
     transition: height 0.3s ease;
 }
 
-/* Reduce logo size for smaller screens */
+
 @media screen and (max-width: 768px) {
     .logo-image {
         height: 40px;
@@ -125,19 +125,19 @@ header {
     }
 }
 
-/* Header left section to ensure logo stays aligned */
+
 .header-left {
     display: flex;
     align-items: center;
 }
 
-/* Right side: hamburger + nav links */
+
 .header-right {
     display: flex;
     align-items: center;
 }
 
-/* Hamburger icon styling */
+
 .menu-icon {
     width: 2rem;
     height: 2rem;
@@ -148,7 +148,7 @@ header {
     margin-left: 1rem;
 }
 
-/* Each bar in the hamburger */
+
 .menu-icon .bar {
     width: 100%;
     height: 3px;
@@ -157,7 +157,7 @@ header {
     transition: all 0.3s ease;
 }
 
-/* Navbar */
+
 .navbar-links {
     position: absolute;
     top: 4.5rem;
@@ -180,7 +180,7 @@ header {
     text-align: right;
 }
 
-/* When nav is open (mobile) */
+
 .navbar-links.nav-open {
     opacity: 1;
     transform: translateY(0);
@@ -208,7 +208,7 @@ header {
     }
 }
 
-/* Hide-on-scroll: shifts header up */
+
 .header-hide {
     top: -80px;
 }
@@ -244,10 +244,10 @@ header {
 
 @keyframes overlayFade {
     0% {
-        background: rgba(255, 255, 255, 0); /* Transparent at start */
+        background: rgba(255, 255, 255, 0);
     }
     100% {
-        background: rgba(255, 255, 255, 0.3); /* Final overlay color */
+        background: rgba(255, 255, 255, 0.3);
     }
 }
 
@@ -464,7 +464,7 @@ header {
     font-weight: 400;
 }
 
-/* Container holding multiple achievements */
+
 .achievements {
     margin-top: 0.5em;
     display: flex;
@@ -472,29 +472,29 @@ header {
     gap: 0.5em;
 }
 
-/* Each achievement row (icon + text) */
+
 .achievement {
-    display: flex;          /* Use flex so row-reverse works */
-    flex-direction: row;    /* Default direction for even items */
+    display: flex;
+    flex-direction: row;
     align-items: center;
     gap: 0.5rem;
     margin-bottom: 1rem;
 }
 
-/* Force each icon to occupy the same horizontal space */
+
 .achievement i {
-    flex: 0 0 40px; /* 40px fixed width for the icon */
+    flex: 0 0 40px;
     text-align: center;
     line-height: 1;
     font-size: 1.5rem;
 }
 
-/* For odd items, reverse icon and text to the other side */
+
 .timeline-item:nth-child(odd) .achievement {
     flex-direction: row-reverse;
 }
 
-/* On mobile screens */
+
 @media screen and (max-width: 800px) {
     .timeline-item:nth-child(odd) .achievement {
         flex-direction: row;
@@ -519,10 +519,8 @@ header {
         right: auto;
     }
 
-    /* Keep .achievement as flex,
-       but you can override the icon size if desired for mobile: */
     .achievement i {
-        flex: 0 0 30px; /* maybe slightly smaller on mobile */
+        flex: 0 0 30px;
         font-size: 1.3rem;
     }
 }
@@ -577,10 +575,10 @@ header {
 }
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* More compact grid */
-    gap: 1rem; /* Reduce gap for tighter layout */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
     justify-items: center;
-    max-width: 800px; /* Restrict width for better alignment */
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -612,17 +610,17 @@ header {
 }
 
 .skill-card h4 {
-    font-size: 0.9rem; /* Smaller text */
+    font-size: 0.9rem;
     margin-bottom: 0.5rem;
     color: #555;
 }
 
 .skill-card .skill-icon {
-    color: #555; /* Default grey color */
+    color: #555;
     transition: color 0.3s ease-in-out;
 }
 
-/* Assign specific highlight colors */
+
 .skill-card.java:hover .skill-icon {
     color: #007396;
 }
@@ -795,11 +793,11 @@ header {
     align-items: center;
 }
 
-/* Keep Image at 69% Width */
+
 .under-construction img {
     display: block;
-    width: 69%; /* Ensures image stays 69% width */
-    max-width: 500px; /* Prevents it from getting too large */
+    width: 69%;
+    max-width: 500px;
     filter: grayscale(100%) brightness(0.6);
     transition: filter 0.5s ease-in-out, transform 0.6s ease-in-out;
 }
@@ -827,7 +825,7 @@ header {
 }
 
 
-/* Tape Positions */
+
 .tape-top {
     top: 10%;
     left: -10%;
@@ -840,7 +838,7 @@ header {
     transform: rotate(15deg);
 }
 
-/* Unwrap Effect */
+
 .under-construction:hover img {
     filter: none;
     transform: scale(1.05);
