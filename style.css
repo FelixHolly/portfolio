@@ -572,6 +572,7 @@ header {
 ******************************************/
 .skills{
     width: 100%;
+    margin-bottom: 5rem;
 }
 .skills-grid {
     display: grid;
@@ -721,7 +722,7 @@ header {
 .project-card-container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 10rem;
     max-width: 1000px;
     margin: 2rem auto;
 }
@@ -734,6 +735,13 @@ header {
     gap: 2rem;
 }
 
+.project-card-right {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 2rem;
+}
+
 
 .project-image img {
     width: 69%;
@@ -741,7 +749,7 @@ header {
     border-radius: 8px;
     object-fit: cover;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    max-width: 500px;
+    max-width: 310px;
 }
 
 
@@ -784,6 +792,20 @@ header {
     color: #fff;
 }
 
+.disabled-link {
+    display: inline-block;
+    color: #999;
+    background-color: #eee;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    pointer-events: none; /* disables click */
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
 /* UNDER-CONSTRUCTION WRAP EFFECT */
 .under-construction {
     position: relative;
@@ -797,7 +819,7 @@ header {
 .under-construction img {
     display: block;
     width: 69%;
-    max-width: 500px;
+    max-width: 310px;
     filter: grayscale(100%) brightness(0.6);
     transition: filter 0.5s ease-in-out, transform 0.6s ease-in-out;
 }
@@ -841,7 +863,6 @@ header {
 
 .under-construction:hover img {
     filter: none;
-    transform: scale(1.05);
 }
 
 .under-construction:hover .tape-top {
@@ -861,6 +882,11 @@ header {
         text-align: center;
     }
     .project-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-card-right {
         flex-direction: column;
         text-align: center;
     }
