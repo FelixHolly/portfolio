@@ -2,342 +2,143 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <link href="https://fonts.googleapis.com" rel="preconnect"/>
-    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
-    <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;700&display=swap"
-            rel="stylesheet"
-    />
-    <link
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-            rel="stylesheet"
-    />
-    <link
-            href="assets/favicon/apple-touch-icon.png"
-            rel="apple-touch-icon"
-            sizes="180x180"
-    />
-    <link
-            href="assets/favicon/favicon-32x32.png"
-            rel="icon"
-            sizes="32x32"
-            type="image/png"
-    />
-    <link
-            href="assets/favicon/favicon-16x16.png"
-            rel="icon"
-            sizes="16x16"
-            type="image/png"
-    />
-    <link href="style.css" rel="stylesheet"/>
-    <title>FH</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Felix Hollndonner – Fullstack Developer</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
 </head>
-
-
 <body>
 
-<header>
-    <div class="header-container">
-        <div class="header-left">
-            <img src="assets/logo.jpeg" alt="Logo" class="logo-image">
+<header class="hero-section">
+    <div class="hero-left">
+        <h2 class="hello-text">HELLO</h2>
+        <h1 class="name-text">I’m Felix</h1>
+        <p class="title-text">A Fullstack Web Developer</p>
+        <a class="cta-button" href="#contact">Hire Me</a>
+        <div class="social-icons">
+            <a href="https://github.com/FelixHolly" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/felix-hollndonner" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
-        <div class="header-right">
-            <div class="menu-icon" id="menuIcon">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <nav class="navbar-links" id="navbar">
-                <a href="#home">HOME</a>
-                <a href="#about">ABOUT</a>
-                <a href="#projects">PORTFOLIO</a>
-                <a href="#contact">CONTACT</a>
-            </nav>
-        </div>
+    </div>
+    <div class="hero-right">
+        <img src="assets/me.jpeg" alt="Felix Hollndonner" class="hero-image"/>
     </div>
 </header>
 
-<div class="introContainer" id="home">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <h1 class="typewriter" id="name"></h1>
-        <h2 class="typewriter" id="job-title"></h2>
+<nav class="side-navbar" id="sideNavbar">
+    <div class="mobile-header">
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
+    <ul id="sideNavLinks">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT ME</a></li>
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#projects">PORTFOLIO</a></li>
+        <li><a href="#testimonials">TESTIMONIALS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+    </ul>
+</nav>
 
-    <div id="scrollIndicator" class="scroll-indicator">
-        <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="180"
-                height="60"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#fff"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="arrow-svg"
-        >
-            <polyline points="6 9 12 15 18 9"></polyline>
-        </svg>
-    </div>
-</div>
+<div class="scroll-down">↓</div>
 
-
-<div class="content-container">
-    <div class="about-me scroll-effect fade-in-bottom section" id="about">
-        <h3>About Me</h3>
+<section id="about" class="about-section fade-in">
+    <div class="about-container">
         <div class="about-text">
+            <h2>About Me</h2>
             <p>
-                Hello! I'm Felix, a dedicated Fullstack Software Developer with a passion for creating
-                dynamic and user-friendly web applications.
+                Hello! I'm Felix, a passionate Fullstack Developer who enjoys building efficient,
+                user-friendly applications. With over 2 years of experience in Java and Angular,
+                I specialize in creating seamless backend and frontend solutions.
             </p>
             <p>
-                With over 2 years of experience in Java and 1 year in Angular, I specialize in developing robust
-                backend systems and intuitive frontend interfaces. My expertise lies in leveraging technologies like
-                Spring Boot, Angular, and RESTful APIs to build scalable solutions.
+                I'm highly motivated by problem solving, collaboration, and building tools that make life easier.
+                I take pride in writing clean, maintainable code and constantly improving as a developer.
             </p>
-            <p>
-                I'm passionate about solving complex problems and continually learning new technologies. I thrive in
-                collaborative environments where I can contribute to innovative projects that make a meaningful
-                impact.
-            </p>
-            <p>
-                Interested in collaborating or learning more about my work?
-            </p>
+            <a href="#projects" class="cta-button secondary">See My Work</a>
         </div>
-        <a class="cta-button" href="#contact">Feel free to reach out!</a>
+        <div class="about-photo">
+            <img src="assets/about-me.jpg" alt="Felix at work" />
+        </div>
     </div>
+</section>
 
-    <div class="skills scroll-effect section" id="skills">
-        <h3>Skills</h3>
-        <div class="skills-grid">
-            <div class="skill-card java">
-                <i class="fab fa-java skill-icon"></i>
-                <h4>Java</h4>
+<section id="skills" class="skills-section fade-in">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-card fade-in"><i class="fab fa-java skill-icon"></i><h4>Java</h4></div>
+        <div class="skill-card fade-in"><i class="fas fa-leaf skill-icon"></i><h4>Spring Boot</h4></div>
+        <div class="skill-card fade-in"><i class="fab fa-angular skill-icon"></i><h4>Angular</h4></div>
+        <div class="skill-card fade-in"><i class="fas fa-database skill-icon"></i><h4>SQL</h4></div>
+        <div class="skill-card fade-in"><i class="fab fa-html5 skill-icon"></i><h4>HTML</h4></div>
+        <div class="skill-card fade-in"><i class="fab fa-css3-alt skill-icon"></i><h4>CSS</h4></div>
+        <div class="skill-card fade-in"><i class="fab fa-js-square skill-icon"></i><h4>JavaScript</h4></div>
+        <div class="skill-card fade-in"><i class="fas fa-tasks skill-icon"></i><h4>Scrum</h4></div>
+        <div class="skill-card fade-in"><i class="fas fa-project-diagram skill-icon"></i><h4>Jira</h4></div>
+        <div class="skill-card fade-in"><i class="fas fa-terminal skill-icon"></i><h4>Linux</h4></div>
+        <div class="skill-card fade-in"><i class="fas fa-drafting-compass skill-icon"></i><h4>Figma</h4></div>
+        <div class="skill-card fade-in"><i class="fas fa-envelope-open-text skill-icon"></i><h4>Postman</h4></div>
+        <div class="skill-card fade-in"><i class="fas fa-vial skill-icon"></i><h4>Jest</h4></div>
+        <div class="skill-card fade-in"><i class="fas fa-clipboard-check skill-icon"></i><h4>JUnit</h4></div>
+    </div>
+</section>
+
+<section id="projects" class="projects-section fade-in">
+    <h2>Portfolio</h2>
+    <div class="project-grid">
+        <div class="project-card disabled">
+            <img src="assets/wheel-wallet.png" alt="WheelWallet Screenshot" />
+            <div class="project-info">
+                <h3>WheelWallet</h3>
+                <p>A car management platform to organize documents, appointments, and ownership history — all in one place.</p>
+                <a class="disabled-link" title="Coming soon...">Coming Soon</a>
             </div>
-            <div class="skill-card spring-boot">
-                <i class="fas fa-leaf skill-icon"></i>
-                <h4>Spring Boot</h4>
-            </div>
-            <div class="skill-card angular">
-                <i class="fab fa-angular skill-icon"></i>
-                <h4>Angular</h4>
-            </div>
-            <div class="skill-card sql">
-                <i class="fas fa-database skill-icon"></i>
-                <h4>SQL</h4>
-            </div>
-            <div class="skill-card html">
-                <i class="fab fa-html5 skill-icon"></i>
-                <h4>HTML</h4>
-            </div>
-            <div class="skill-card css">
-                <i class="fab fa-css3-alt skill-icon"></i>
-                <h4>CSS</h4>
-            </div>
-            <div class="skill-card javascript">
-                <i class="fab fa-js-square skill-icon"></i>
-                <h4>JavaScript</h4>
-            </div>
-            <div class="skill-card scrum">
-                <i class="fas fa-tasks skill-icon"></i>
-                <h4>Scrum</h4>
-            </div>
-            <div class="skill-card jira">
-                <i class="fas fa-project-diagram skill-icon"></i>
-                <h4>Jira</h4>
-            </div>
-            <div class="skill-card linux">
-                <i class="fas fa-terminal skill-icon"></i>
-                <h4>Linux</h4>
-            </div>
-            <div class="skill-card figma">
-                <i class="fas fa-drafting-compass skill-icon"></i>
-                <h4>Figma</h4>
-            </div>
-            <div class="skill-card postman">
-                <i class="fas fa-envelope-open-text skill-icon"></i>
-                <h4>Postman</h4>
-            </div>
-            <div class="skill-card jest">
-                <i class="fas fa-vial skill-icon"></i>
-                <h4>Jest</h4>
-            </div>
-            <div class="skill-card junit">
-                <i class="fas fa-clipboard-check skill-icon"></i>
-                <h4>JUnit</h4>
+        </div>
+        <div class="project-card">
+            <img src="assets/greenwave.png" alt="GreenWave Screenshot" />
+            <div class="project-info">
+                <h3>GreenWave</h3>
+                <p>A GPS-based traffic light optimization tool that helps drivers catch more green lights using crowdsourced data.</p>
+                <a href="https://greenwave-webapp.onrender.com" target="_blank" class="cta-button">View Live</a>
             </div>
         </div>
     </div>
+</section>
 
-    <div class="experiences section scroll-effect">
-        <h3>Experience</h3>
-        <div class="timeline">
-
-            <div class="timeline-item scroll-effect fade-in-left">
-                <div class="timeline-date">January 2023 - July 2023</div>
-                <div class="timeline-content">
-                    <h4>Fullstack Developer</h4>
-                    <h5>Polyoint AG</h5>
-                    <div class="achievements">
-                        <div class="achievement">
-                            <i class="fab fa-angular"></i>
-                            <p>Deepened Angular knowledge</p>
-                        </div>
-                        <div class="achievement">
-                            <i class="fab fa-java"></i>
-                            <p>Enhanced Java skills</p>
-                        </div>
-                        <div class="achievement">
-                            <i class="fas fa-users"></i>
-                            <p>Improved Scrum practices</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item scroll-effect fade-in-right">
-                <div class="timeline-date">January 2021 - December 2022</div>
-                <div class="timeline-content">
-                    <h4>Software Developer</h4>
-                    <h5>Eurotours</h5>
-                    <div class="achievements">
-                        <div class="achievement">
-                            <i class="fab fa-java"></i>
-                            <p>Deepened Java knowledge</p>
-                        </div>
-                        <div class="achievement">
-                            <i class="fas fa-plane"></i>
-                            <p>Developed applications for travel agency context</p>
-                        </div>
-                        <div class="achievement">
-                            <i class="fas fa-code-branch"></i>
-                            <p>Built REST APIs</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="timeline-item scroll-effect fade-in-left">
-                <div class="timeline-date">July 2019 - December 2020</div>
-                <div class="timeline-content">
-                    <h4>IT Support</h4>
-                    <h5>Freywille</h5>
-                    <div class="achievements">
-                        <div class="achievement">
-                            <i class="fas fa-laptop-code"></i>
-                            <p>First coding experience in a business context</p>
-                        </div>
-                        <div class="achievement">
-                            <i class="fas fa-network-wired"></i>
-                            <p>Gained network administration skills</p>
-                        </div>
-                        <div class="achievement">
-                            <i class="fas fa-tools"></i>
-                            <p>Worked on troubleshooting in programming</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<section id="testimonials" class="testimonials-section">
+    <h2>Testimonials</h2>
+    <div class="testimonial fade-in">
+        <p>"Felix H. demonstrated his willingness to learn, flexibility, and strong comprehension
+            skills by quickly adapting to new technologies such as Angular. His technically sound and
+            conscientious approach consistently delivered flawless results."</p>
+        <p class="author">– Team Lead, Polyoint AG</p>
     </div>
-
-    <div class="testimonials scroll-effect fade-in-left section">
-        <h3>Testimonials</h3>
-        <div class="testimonial">
-            <p>"Felix H. demonstrated his willingness to learn, flexibility, and strong comprehension
-                skills by quickly adapting to new technologies such as Angular. His technically sound and
-                conscientious approach consistently delivered flawless results, making him a great asset to the
-                team."</p>
-            <p class="author">- Team Leader Software Development at Polyoint AG</p>
-        </div>
-        <div class="testimonial">
-            <p>"Felix H. demonstrated exceptional technical skills and a professional, empathetic approach
-                in his role as a Software Developer. He was instrumental in the development and support of Java
-                applications, as well as in establishing new technologies and infrastructure. His structured and
-                effective work style, combined with his above-average dedication, consistently delivered outstanding
-                results. Felix was highly regarded by both colleagues and management for his cooperative and helpful
-                nature. We would unreservedly recommend him as a conscientious and team-oriented professional."</p>
-            <p class="author">- Team Lead at Eurotours</p>
-        </div>
+    <div class="testimonial fade-in">
+        <p>"Felix H. demonstrated exceptional technical skills and a professional, empathetic approach
+            in his role as a Software Developer. His structured and effective work style, combined with
+            his above-average dedication, consistently delivered outstanding results."</p>
+        <p class="author">– Software Manager, Eurotours</p>
     </div>
+</section>
 
-
-    <div class="projects scroll-effect section" id="projects">
-        <h3>Portfolio</h3>
-
-        <div class="project-card-container">
-            <div class="project-card">
-                <div class="project-image under-construction">
-                    <img src="assets/wheel-wallet.png" alt="WheelWallet Preview"/>
-                    <div class="tape tape-top">UNDER CONSTRUCTION</div>
-                    <div class="tape tape-bottom">HOVER ME!</div>
-                </div>
-                <div class="project-info">
-                    <h2>WheelWallet</h2>
-                    <p>
-                        A comprehensive car management tool to organize all your vehicles and
-                        streamline paperwork handling in one convenient place.
-                    </p>
-<!--                    <a href="https://github.com/FelixHolly/WheelWallet" target="_blank">View</a>-->
-                    <a class="disabled-link" title="Coming soon...">Coming soon...</a>
-
-                </div>
-            </div>
-            <div class="project-card-right">
-                <div class="project-image under-construction">
-                    <img src="assets/greenwave.png" alt="WheelWallet Preview"/>
-                    <div class="tape tape-top">UNDER CONSTRUCTION</div>
-                    <div class="tape tape-bottom">HOVER ME!</div>
-                </div>
-                <div class="project-info">
-                    <h2>GreenWave</h2>
-                    <p>
-                        A smart web app that helps drivers catch more green lights by crowdsourcing traffic light timings.
-                        Built with Angular and Spring Boot, it uses real-time GPS, direction-aware logic,
-                        and schedule tracking to improve traffic flow and driving efficiency.
-                    </p>
-                    <a href="https://greenwave-webapp.onrender.com" target="_blank">View</a>
-                </div>
-            </div>
-        </div>
+<section id="contact" class="contact-section fade-in">
+    <h2>Contact Me</h2>
+    <p>Interested in working together or just want to say hi? Send me a message!</p>
+    <form action="mailto:you@email.com" method="post" enctype="text/plain" class="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    <div class="contact-social">
+        <a href="https://www.linkedin.com/in/felix-hollndonner" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/FelixHolly" target="_blank"><i class="fab fa-github"></i></a>
     </div>
-
-    <div class="contact-section scroll-effect fade-in-bottom section" id="contact">
-        <h3>Contact Me</h3>
-        <p>
-            Feel free to send me a message or connect with me on LinkedIn, GitHub, or
-            any of my social platforms below.
-        </p>
-
-        <form action="mailto:25485760c5bc47d29ab00df39676ae84@domainsbyproxy.com" class="contact-form" enctype="text/plain" method="post">
-            <label for="name-form">Name:</label>
-            <input id="name-form" name="name" placeholder="Your Name" required type="text"/>
-
-            <label for="email">Email:</label>
-            <input id="email" name="email" placeholder="Your Email" required type="email"/>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" placeholder="Your Message" required rows="5"></textarea>
-
-            <button type="submit">Send</button>
-        </form>
-
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/felix-hollndonner" target="_blank"><i
-                    class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/FelixHolly" target="_blank"><i class="fab fa-github"></i></a>
-        </div>
-    </div>
-</div>
-
-<footer>
-    <p>© Felix Holly</p>
-    <p>All rights reserved</p>
-</footer>
-
-<div id="customCursor"></div>
+</section>
 
 <script src="script.js"></script>
 </body>
