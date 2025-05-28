@@ -104,6 +104,23 @@ body {
     z-index: 2;
 }
 
+.gradient-text {
+    font-size: inherit;
+    font-weight: bold;
+    background: linear-gradient(270deg, #ff6ec4, #7873f5, #4adede, #ff6ec4);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 6s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0 50%; }
+}
+
+
 /* ===== Responsive Hero ===== */
 @media screen and (max-width: 768px) {
     .hero-section {
