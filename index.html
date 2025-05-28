@@ -2,15 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Felix Hollndonner – Fullstack Developer</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Felix H. – Fullstack Developer</title>
+    <link href="style.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400&display=swap"
+          rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
 </head>
 <body>
 
-<header class="hero-section">
+<header class="hero-section" id="home">
     <div class="hero-left">
         <h2 class="hello-text">HELLO</h2>
         <h1 class="name-text">I’m Felix</h1>
@@ -22,7 +23,7 @@
         </div>
     </div>
     <div class="hero-right">
-        <img src="assets/me.jpeg" alt="Felix Hollndonner" class="hero-image"/>
+        <img alt="Felix Hollndonner" class="hero-image" src="assets/me.png"/>
     </div>
 </header>
 
@@ -44,9 +45,7 @@
     </ul>
 </nav>
 
-<div class="scroll-down">↓</div>
-
-<section id="about" class="about-section fade-in">
+<section class="about-section fade-in" id="about">
     <div class="about-container">
         <div class="about-text">
             <h2>About Me</h2>
@@ -59,15 +58,15 @@
                 I'm highly motivated by problem solving, collaboration, and building tools that make life easier.
                 I take pride in writing clean, maintainable code and constantly improving as a developer.
             </p>
-            <a href="#projects" class="cta-button secondary">See My Work</a>
+            <a class="cta-button secondary" href="#projects">See My Work</a>
         </div>
         <div class="about-photo">
-            <img src="assets/about-me.jpg" alt="Felix at work" />
+            <img alt="Felix at work" src="assets/about-me.png"/>
         </div>
     </div>
 </section>
 
-<section id="skills" class="skills-section fade-in">
+<section class="skills-section fade-in" id="skills">
     <h2>Skills</h2>
     <div class="skills-grid">
         <div class="skill-card fade-in"><i class="fab fa-java skill-icon"></i><h4>Java</h4></div>
@@ -87,29 +86,31 @@
     </div>
 </section>
 
-<section id="projects" class="projects-section fade-in">
+<section class="projects-section fade-in" id="projects">
     <h2>Portfolio</h2>
     <div class="project-grid">
         <div class="project-card disabled">
-            <img src="assets/wheel-wallet.png" alt="WheelWallet Screenshot" />
+            <img alt="WheelWallet Screenshot" src="assets/wheel-wallet.png"/>
             <div class="project-info">
                 <h3>WheelWallet</h3>
-                <p>A car management platform to organize documents, appointments, and ownership history — all in one place.</p>
+                <p>A car management platform to organize documents, appointments, and ownership history — all in one
+                    place.</p>
                 <a class="disabled-link" title="Coming soon...">Coming Soon</a>
             </div>
         </div>
         <div class="project-card">
-            <img src="assets/greenwave.png" alt="GreenWave Screenshot" />
+            <img alt="GreenWave Screenshot" src="assets/greenwave.png"/>
             <div class="project-info">
                 <h3>GreenWave</h3>
-                <p>A GPS-based traffic light optimization tool that helps drivers catch more green lights using crowdsourced data.</p>
-                <a href="https://greenwave-webapp.onrender.com" target="_blank" class="cta-button">View Live</a>
+                <p>A GPS-based traffic light optimization tool that helps drivers catch more green lights using
+                    crowdsourced data.</p>
+                <a class="cta-button" href="https://greenwave-webapp.onrender.com" target="_blank">View Live</a>
             </div>
         </div>
     </div>
 </section>
 
-<section id="testimonials" class="testimonials-section">
+<section class="testimonials-section" id="testimonials">
     <h2>Testimonials</h2>
     <div class="testimonial fade-in">
         <p>"Felix H. demonstrated his willingness to learn, flexibility, and strong comprehension
@@ -125,13 +126,13 @@
     </div>
 </section>
 
-<section id="contact" class="contact-section fade-in">
+<section class="contact-section fade-in" id="contact">
     <h2>Contact Me</h2>
     <p>Interested in working together or just want to say hi? Send me a message!</p>
-    <form action="mailto:you@email.com" method="post" enctype="text/plain" class="contact-form">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <form action="mailto:you@email.com" class="contact-form" enctype="text/plain" method="post">
+        <input name="name" placeholder="Your Name" required type="text"/>
+        <input name="email" placeholder="Your Email" required type="email"/>
+        <textarea name="message" placeholder="Your Message" required rows="5"></textarea>
         <button type="submit">Send Message</button>
     </form>
     <div class="contact-social">
@@ -141,5 +142,15 @@
 </section>
 
 <script src="script.js"></script>
+<footer class="footer">
+    <div class="footer-content">
+        <p>© 2025 Felix Hollndonner. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="https://github.com/FelixHolly" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/felix-hollndonner" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>

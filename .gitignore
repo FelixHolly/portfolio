@@ -1,0 +1,38 @@
+# Ignore macOS system files
+.DS_Store
+
+# Node.js dependencies (if using npm for SCSS tools, etc.)
+node_modules/
+
+# Build output (if using build tools like Webpack, Vite, or Jekyll)
+dist/
+build/
+out/
+public/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# VS Code workspace settings
+.vscode/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Cache files
+.cache/
+*.log
+
+# GitHub Pages CNAME override (only if you're dynamically setting it)
+# CNAME
+
+# Optional: OS/IDE specific
+*.swp
+.idea/
+*.iml
+*.sublime-workspace
+*.sublime-project

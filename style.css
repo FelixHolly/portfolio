@@ -15,7 +15,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 100vh;
-    padding: 0 5%;
+    padding: 0 10%;
     background: linear-gradient(135deg, #0e2a47, #17457e);
     color: white;
     overflow: hidden;
@@ -236,21 +236,6 @@ body {
     .side-navbar li {
         margin: 0.5rem 0;
     }
-}
-
-.scroll-down {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.5rem;
-    color: #fff;
-    animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-    0%, 100% { transform: translate(-50%, 0); }
-    50% { transform: translate(-50%, -10px); }
 }
 
 /* ===== About Section ===== */
@@ -533,3 +518,33 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
+
+/* ===== Footer ===== */
+.footer {
+    background-color: #0e2a47;
+    color: white;
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 0.5rem;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #8ecae6;
+}
+
