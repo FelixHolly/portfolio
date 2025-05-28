@@ -120,6 +120,24 @@ body {
     100% { background-position: 0 50%; }
 }
 
+.hero-left > * {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s forwards;
+}
+
+.hero-left .hello-text { animation-delay: 0.2s; }
+.hero-left .name-text { animation-delay: 0.4s; }
+.hero-left .title-text { animation-delay: 0.6s; }
+.hero-left .cta-button { animation-delay: 0.8s; }
+.hero-left .social-icons { animation-delay: 1s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 /* ===== Responsive Hero ===== */
 @media screen and (max-width: 768px) {
@@ -199,6 +217,7 @@ body {
     text-decoration: underline;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
+
 
 .hamburger {
     display: none;
