@@ -117,3 +117,48 @@ document.addEventListener("DOMContentLoaded", () => {
         fx.setText("Felix");
     }
 });
+
+// ===== Smooth Scroll for Navigation Links =====
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// ===== Dynamic Text Color Based on Scroll =====
+window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const heroSection = document.querySelector('.hero-section');
+    const aboutSection = document.querySelector('.about-section');
+
+    // Calculate scroll progress through gradient (0 to 1)
+    const gradientHeight = windowHeight * 1.5; // 150vh
+    const scrollProgress = Math.min(scrollPosition / gradientHeight, 1);
+
+    // Change hero text color based on scroll
+    if (heroSection && scrollProgress < 0.5) {
+        // Dark background - white text
+        heroSection.style.color = '#fef9e1';
+    } else if (heroSection && scrollProgress >= 0.5) {
+        // Light background - dark text
+        heroSection.style.color = '#1e1310';
+    }
+
+    // Change about section text based on position
+    if (aboutSection) {
+        const aboutTop = aboutSection.offsetTop;
+        const aboutScroll = scrollPosition - aboutTop + windowHeight;
+
+        if (scrollPosition > aboutTop - windowHeight * 0.3) {
+            aboutSection.style.color = '#1e1310';
+        }
+    }
+});
