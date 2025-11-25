@@ -1,152 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta Tags -->
     <meta charset="UTF-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Felix H. – Fullstack Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Felix Hollndonner - Fullstack Web Developer with 2+ years of experience in Java, Spring Boot, and Angular. Building efficient, user-friendly applications."/>
+    <meta name="keywords" content="Fullstack Developer, Java Developer, Angular Developer, Spring Boot, Web Development, Software Engineer"/>
+    <meta name="author" content="Felix Hollndonner"/>
+    <meta name="robots" content="index, follow"/>
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Felix Hollndonner – Fullstack Developer"/>
+    <meta property="og:description" content="Fullstack Web Developer specializing in Java, Spring Boot, and Angular with 2+ years of experience."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://felixhollndonner.com"/>
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Felix Hollndonner – Fullstack Developer"/>
+    <meta name="twitter:description" content="Fullstack Web Developer specializing in Java, Spring Boot, and Angular."/>
+
+    <!-- Title -->
+    <title>Felix Hollndonner – Fullstack Developer | Java, Spring Boot, Angular</title>
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com"/>
+
+    <!-- Stylesheets -->
     <link href="style.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-          rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
 </head>
 <body>
 
 <header class="hero-section" id="home">
-    <div class="hero-left">
+    <div class="grid-background"></div>
+    <div class="hero-content">
         <h2 class="hello-text">HELLO</h2>
-        <h1 class="name-text">I’m <span class="gradient-text">Felix</span></h1>
+        <h1 class="name-text">I'm <span class="gradient-text">Felix</span></h1>
         <p class="title-text">A Fullstack Web Developer</p>
-        <a class="cta-button" href="#contact">Hire Me</a>
-        <div class="social-icons">
-            <a href="https://github.com/FelixHolly" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/felix-hollndonner" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <div class="tech-stack">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Spring Boot</span>
+            <span class="tech-tag">Angular</span>
+            <span class="tech-tag">TypeScript</span>
+        </div>
+        <a class="cta-button" href="#contact" aria-label="Contact me for work opportunities">Hire Me</a>
+        <div class="social-icons" role="complementary" aria-label="Social media links">
+            <a href="https://github.com/FelixHolly" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub profile">
+                <i class="fab fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/felix-hollndonner" target="_blank" rel="noopener noreferrer" aria-label="Visit my LinkedIn profile">
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
+            </a>
         </div>
     </div>
 </header>
 
-<nav class="side-navbar" id="sideNavbar">
+<nav class="side-navbar" id="sideNavbar" role="navigation" aria-label="Main navigation">
     <div class="mobile-header">
-        <div class="hamburger" id="hamburger">
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
-        </div>
+        </button>
     </div>
     <ul id="sideNavLinks">
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#about">ABOUT ME</a></li>
-        <li><a href="#skills">SKILLS</a></li>
-        <li><a href="#projects">PORTFOLIO</a></li>
-        <li><a href="#testimonials">TESTIMONIALS</a></li>
-        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#home" aria-label="Navigate to home section">HOME</a></li>
+        <li><a href="#about" aria-label="Navigate to about section">ABOUT ME</a></li>
+        <li><a href="#skills" aria-label="Navigate to skills section">SKILLS</a></li>
+        <li><a href="#projects" aria-label="Navigate to projects section">PORTFOLIO</a></li>
+        <li><a href="#testimonials" aria-label="Navigate to testimonials section">TESTIMONIALS</a></li>
+        <li><a href="#contact" aria-label="Navigate to contact section">CONTACT</a></li>
     </ul>
 </nav>
 
-<section class="about-section" id="about">
+<section class="about-section" id="about" aria-labelledby="about-heading">
     <div class="about-container fade-in">
-        <div class="about-text">
-            <h2>About Me</h2>
-            <p>
-                Hello! I'm Felix, a passionate Fullstack Developer who enjoys building efficient,
-                user-friendly applications. With over 2 years of experience in Java and Angular,
-                I specialize in creating seamless backend and frontend solutions.
-            </p>
-            <p>
-                I'm highly motivated by problem solving, collaboration, and building tools that make life easier.
-                I take pride in writing clean, maintainable code and constantly improving as a developer.
-            </p>
-            <a class="cta-button secondary" href="#projects">See My Work</a>
+        <h2 id="about-heading">About Me</h2>
+        <div class="about-cards" role="list">
+            <article class="about-card" role="listitem">
+                <div class="card-number" aria-hidden="true">01</div>
+                <h3>2+ Years Experience</h3>
+                <p>Building efficient, user-friendly applications with Java and Angular, specializing in seamless backend and frontend solutions.</p>
+            </article>
+            <article class="about-card" role="listitem">
+                <div class="card-number" aria-hidden="true">02</div>
+                <h3>Problem Solver</h3>
+                <p>Highly motivated by problem solving, collaboration, and building tools that make life easier for users and developers.</p>
+            </article>
+            <article class="about-card" role="listitem">
+                <div class="card-number" aria-hidden="true">03</div>
+                <h3>Clean Code Advocate</h3>
+                <p>Taking pride in writing clean, maintainable code and constantly improving as a developer through learning and practice.</p>
+            </article>
         </div>
+        <a class="cta-button secondary" href="#projects">See My Work</a>
     </div>
 </section>
 
-<section class="skills-section" id="skills">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-        <div class="skill-card fade-in"><i class="fab fa-java skill-icon"></i><h4>Java</h4></div>
-        <div class="skill-card fade-in"><i class="fas fa-leaf skill-icon"></i><h4>Spring Boot</h4></div>
-        <div class="skill-card fade-in"><i class="fab fa-angular skill-icon"></i><h4>Angular</h4></div>
-        <div class="skill-card fade-in"><i class="fas fa-database skill-icon"></i><h4>SQL</h4></div>
-        <div class="skill-card fade-in"><i class="fab fa-html5 skill-icon"></i><h4>HTML</h4></div>
-        <div class="skill-card fade-in"><i class="fab fa-css3-alt skill-icon"></i><h4>CSS</h4></div>
-        <div class="skill-card fade-in"><i class="fab fa-js-square skill-icon"></i><h4>JavaScript</h4></div>
-        <div class="skill-card fade-in"><i class="fas fa-tasks skill-icon"></i><h4>Scrum</h4></div>
-        <div class="skill-card fade-in"><i class="fas fa-project-diagram skill-icon"></i><h4>Jira</h4></div>
-        <div class="skill-card fade-in"><i class="fas fa-terminal skill-icon"></i><h4>Linux</h4></div>
-        <div class="skill-card fade-in"><i class="fas fa-drafting-compass skill-icon"></i><h4>Figma</h4></div>
-        <div class="skill-card fade-in"><i class="fas fa-envelope-open-text skill-icon"></i><h4>Postman</h4></div>
-        <div class="skill-card fade-in"><i class="fas fa-vial skill-icon"></i><h4>Jest</h4></div>
-        <div class="skill-card fade-in"><i class="fas fa-clipboard-check skill-icon"></i><h4>JUnit</h4></div>
+<section class="skills-section" id="skills" aria-labelledby="skills-heading">
+    <h2 id="skills-heading">Skills</h2>
+    <div class="skills-grid" role="list" aria-label="Technical skills">
+        <div class="skill-card fade-in" role="listitem"><i class="fab fa-java skill-icon" aria-hidden="true"></i><h4>Java</h4></div>
+        <div class="skill-card fade-in" role="listitem"><i class="fas fa-leaf skill-icon" aria-hidden="true"></i><h4>Spring Boot</h4></div>
+        <div class="skill-card fade-in" role="listitem"><i class="fab fa-angular skill-icon" aria-hidden="true"></i><h4>Angular</h4></div>
+        <div class="skill-card fade-in" role="listitem"><i class="fas fa-database skill-icon" aria-hidden="true"></i><h4>SQL</h4></div>
+        <div class="skill-card fade-in" role="listitem"><i class="fab fa-html5 skill-icon" aria-hidden="true"></i><h4>HTML</h4></div>
+        <div class="skill-card fade-in" role="listitem"><i class="fab fa-css3-alt skill-icon" aria-hidden="true"></i><h4>CSS</h4></div>
+        <div class="skill-card fade-in" role="listitem"><i class="fab fa-js-square skill-icon" aria-hidden="true"></i><h4>JavaScript</h4></div>
+        <div class="skill-card fade-in" role="listitem"><i class="fas fa-tasks skill-icon" aria-hidden="true"></i><h4>Scrum</h4></div>
+        <div class="skill-card fade-in" role="listitem"><i class="fas fa-project-diagram skill-icon" aria-hidden="true"></i><h4>Jira</h4></div>
+        <div class="skill-card fade-in" role="listitem"><i class="fas fa-terminal skill-icon" aria-hidden="true"></i><h4>Linux</h4></div>
+        <div class="skill-card fade-in" role="listitem"><i class="fas fa-drafting-compass skill-icon" aria-hidden="true"></i><h4>Figma</h4></div>
+        <div class="skill-card fade-in" role="listitem"><i class="fas fa-envelope-open-text skill-icon" aria-hidden="true"></i><h4>Postman</h4></div>
+        <div class="skill-card fade-in" role="listitem"><i class="fas fa-vial skill-icon" aria-hidden="true"></i><h4>Jest</h4></div>
+        <div class="skill-card fade-in" role="listitem"><i class="fas fa-clipboard-check skill-icon" aria-hidden="true"></i><h4>JUnit</h4></div>
     </div>
 </section>
 
-<section class="projects-section" id="projects">
-    <h2>Portfolio</h2>
-    <div class="project-grid fade-in">
-        <div class="project-card disabled">
-            <img alt="WheelWallet Screenshot" src="assets/wheel-wallet.png"/>
+<section class="projects-section" id="projects" aria-labelledby="projects-heading">
+    <h2 id="projects-heading">Portfolio</h2>
+    <div class="project-grid fade-in" role="list" aria-label="Portfolio projects">
+        <article class="project-card disabled" role="listitem">
+            <img alt="WheelWallet application dashboard showing car management features" src="assets/wheel-wallet.png" loading="lazy"/>
             <div class="project-info">
                 <h3>WheelWallet</h3>
-                <p>A car management platform to organize documents, appointments, and ownership history — all in one
-                    place.</p>
-                <a class="disabled-link" title="Coming soon...">Coming Soon</a>
+                <p>A car management platform to organize documents, appointments, and ownership history — all in one place.</p>
+                <span class="disabled-link" role="status" aria-label="Coming soon">Coming Soon</span>
             </div>
-        </div>
-        <div class="project-card">
-            <img alt="GreenWave Screenshot" src="assets/greenwave.png"/>
+        </article>
+        <article class="project-card" role="listitem">
+            <img alt="GreenWave traffic optimization interface with map and route planning" src="assets/greenwave.png" loading="lazy"/>
             <div class="project-info">
                 <h3>GreenWave</h3>
-                <p>A GPS-based traffic light optimization tool that helps drivers catch more green lights using
-                    crowdsourced data.</p>
-                <a class="cta-button" href="https://greenwave-webapp.onrender.com" target="_blank">View Live</a>
+                <p>A GPS-based traffic light optimization tool that helps drivers catch more green lights using crowdsourced data.</p>
+                <a class="cta-button" href="https://greenwave-webapp.onrender.com" target="_blank" rel="noopener noreferrer" aria-label="View GreenWave live application">View Live</a>
             </div>
-        </div>
+        </article>
     </div>
 </section>
 
-<section class="testimonials-section" id="testimonials">
-    <h2>Testimonials</h2>
-    <div class="testimonial fade-in">
+<section class="testimonials-section" id="testimonials" aria-labelledby="testimonials-heading">
+    <h2 id="testimonials-heading">Testimonials</h2>
+    <blockquote class="testimonial fade-in">
         <p>"Felix H. demonstrated his willingness to learn, flexibility, and strong comprehension
             skills by quickly adapting to new technologies such as Angular. His technically sound and
             conscientious approach consistently delivered flawless results."</p>
-        <p class="author">– Team Lead, Polyoint AG</p>
-    </div>
-    <div class="testimonial fade-in">
+        <footer class="author">— Team Lead, Polyoint AG</footer>
+    </blockquote>
+    <blockquote class="testimonial fade-in">
         <p>"Felix H. demonstrated exceptional technical skills and a professional, empathetic approach
             in his role as a Software Developer. His structured and effective work style, combined with
             his above-average dedication, consistently delivered outstanding results."</p>
-        <p class="author">– Software Manager, Eurotours</p>
-    </div>
+        <footer class="author">— Software Manager, Eurotours</footer>
+    </blockquote>
 </section>
 
-<section class="contact-section" id="contact">
+<section class="contact-section" id="contact" aria-labelledby="contact-heading">
     <div class="contact-me-container fade-in">
-        <h2>Contact Me</h2>
+        <h2 id="contact-heading">Contact Me</h2>
         <p>Interested in working together or just want to say hi? Send me a message!</p>
-        <form action="mailto:25485760c5bc47d29ab00df39676ae84@domainsbyproxy.com" class="contact-form" enctype="text/plain" method="post">
-            <input name="name" placeholder="Your Name" required type="text"/>
-            <input name="email" placeholder="Your Email" required type="email"/>
-            <textarea name="message" placeholder="Your Message" required rows="5"></textarea>
-            <button type="submit">Send Message</button>
+        <form action="mailto:25485760c5bc47d29ab00df39676ae84@domainsbyproxy.com" class="contact-form" enctype="text/plain" method="post" aria-label="Contact form">
+            <label for="name" class="sr-only">Your Name</label>
+            <input id="name" name="name" placeholder="Your Name" required type="text" autocomplete="name" aria-required="true"/>
+            <label for="email" class="sr-only">Your Email</label>
+            <input id="email" name="email" placeholder="Your Email" required type="email" autocomplete="email" aria-required="true"/>
+            <label for="message" class="sr-only">Your Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" required rows="5" aria-required="true"></textarea>
+            <button type="submit" aria-label="Submit contact form">Send Message</button>
         </form>
-        <div class="contact-social">
-            <a href="https://www.linkedin.com/in/felix-hollndonner" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/FelixHolly" target="_blank"><i class="fab fa-github"></i></a>
+        <div class="contact-social" role="complementary" aria-label="Social media contact links">
+            <a href="https://www.linkedin.com/in/felix-hollndonner" target="_blank" rel="noopener noreferrer" aria-label="Contact me on LinkedIn">
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="https://github.com/FelixHolly" target="_blank" rel="noopener noreferrer" aria-label="Contact me on GitHub">
+                <i class="fab fa-github" aria-hidden="true"></i>
+            </a>
         </div>
     </div>
 </section>
 
-<script src="script.js"></script>
-<footer class="footer">
-    <div class="footer-content">
-        <p>© 2025 Felix Hollndonner. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="https://github.com/FelixHolly" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/felix-hollndonner" target="_blank"><i class="fab fa-linkedin"></i></a>
-        </div>
-    </div>
-</footer>
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
 
+    <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+            <p>© 2025 Felix Hollndonner. All rights reserved.</p>
+            <div class="footer-links" aria-label="Footer social media links">
+                <a href="https://github.com/FelixHolly" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub profile">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/felix-hollndonner" target="_blank" rel="noopener noreferrer" aria-label="Visit my LinkedIn profile">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
